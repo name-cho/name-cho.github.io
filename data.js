@@ -315,12 +315,10 @@ window.SITE_DATA = {
     { icon: "fab fa-telegram",  name: "telegram",  value: "@name_cho",            url: "https://t.me/name_cho" },
     { icon: "fab fa-telegram",  name: "tg channel", value: "@zoyuki_room",        url: "https://t.me/zoyuki_room" },
     { icon: "fab fa-vk",        name: "vk",        value: "/name_cho",            url: "https://vk.com/name_cho" },
-    { icon: "fab fa-discord",   name: "discord",   value: "a?",                   url: "https://vk.cc/cZ5Wqn" },
+    { icon: "fab fa-discord",   name: "discord server",   value: "a?",                   url: "https://discord.gg/2t6rUjeRJc" },
     { icon: "fab fa-bluesky",   name: "bsky",      value: "@name_cho",            url: "https://bsky.app/profile/name_cho.bsky.social" },
     { icon: "fas fa-paperclip",     name: "max",       value: "the usual bridge",     url: "https://unlk.link/ujuTw" },
-    { icon: "fas fa-user-secret",   name: "vzontakte", value: "/cho",                 url: "https://vzontakte.ru/id73" },
-    { icon: "fab fa-mastodon",  name: "mastodon",  value: "@moyunni",             url: "https://mastodon.social/@moyunni" },
-    { icon: "fas fa-envelope",      name: "mail",      value: "notmyacc@mail.ru",     url: "mailto:notmyacc@mail.ru" },
+    { icon: "fas fa-envelope",      name: "mail",      value: "hvasyak@gmail.com",     url: "mailto:hvasyak@gmail.com" },
     { icon: "fab fa-github",    name: "github",    value: "/name-cho",            url: "https://github.com/name-cho" },
     { icon: "fas fa-globe",         name: "homepage",  value: "name-cho.github.io", url: "https://name-cho.github.io" }
   ],
@@ -427,8 +425,8 @@ window.SITE_DATA = {
       ru: "Где меня найти: мессенджеры, соцсети и git-хостинги."
     },
     socialsNote: {
-      en: "If none of the links open: notmyacc@mail.ru.",
-      ru: "Если ни одна ссылка не открывается: notmyacc@mail.ru."
+      en: "If none of the links open: hvasyak@gmail.com.",
+      ru: "Если ни одна ссылка не открывается: hvasyak@gmail.com."
     }
   }
 };

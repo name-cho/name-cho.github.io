@@ -1,0 +1,46 @@
+{
+  "repometa": {
+    "rm_name": "cho repo",
+    "rm_maintainer": "@name_cho",
+    "rm_url": "https://name-cho.github.io/packit/repomap.json",
+    "rm_mid": "0",
+    "rm_rid": "cho_official",
+    "rm_reports": "",
+    "rm_source": "https://github.com/name-cho/name-cho.github.io",
+    "rm_telegram": "https://t.me/zoyuki_room",
+    "rm_icon": "https://avatars.githubusercontent.com/u/303191525?v=4"
+  },
+  "repomap": {
+    "plugins": "https://name-cho.github.io/packit/plugins.json",
+    "icons": "https://name-cho.github.io/packit/icons.json"
+  },
+  "reasons": {
+    "reasons": [
+      "Безопасность / Security",
+      "Качество / Quality",
+      "Авторские права / Copyright",
+      "Вредоносное ПО / Malware",
+      "Ввод в заблуждение / Deception",
+      "Другое / Other"
+    ],
+    "settings": ["zoyuki_room", 1]
+  },
+  "suggest_plugins": {
+    "settings": {
+      "allow_forks": true,
+      "allow_notes": true,
+      "allow_changelog": true,
+      "allow_multi_files": 3,
+      "allow_socials": 3,
+      "allow_paid": false,
+      "allor_source": true
+    },
+    "config": {
+      "acc_id": 0,
+      "acc_user": "name_cho",
+      "rules": "https://name-cho.github.io/packit/rules.md",
+      "rules_name": "cho/packit rules",
+      "json": true
+    }
+  }
+}

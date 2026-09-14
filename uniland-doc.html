@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uniland / docs</title>
+<meta name="description" content="UniLand language documentation."/>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="assets/jetbrains-mono.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/fontawesome-subset.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/style.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/docs.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/fx.css?v=1789398069"/>
+</head>
+<body>
+<div class="SideNav-module__W2m5EW__overlay" id="sideOverlay" aria-hidden="true"></div>
+<aside class="SideNav-module__W2m5EW__sideNav" id="sideNav">
+<nav class="SideNav-module__W2m5EW__navList" id="sideNavList"></nav>
+</aside>
+<div class="TopBar-module__hfKmSa__topBar">
+<div class="TopBar-module__hfKmSa__leftSlot">
+<div class="TopBar-module__hfKmSa__settingsBtnWrap">
+<button class="TopBar-module__hfKmSa__settingsBtn" id="navBtn" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+<span class="TopBar-module__hfKmSa__tooltip TopBar-module__hfKmSa__tooltipRight" data-i18n="navigation">Navigation</span>
+</div>
+</div>
+<nav class="TopBar-module__hfKmSa__breadcrumb" aria-label="breadcrumb">
+<span class="TopBar-module__hfKmSa__breadcrumbItem TopBar-module__hfKmSa__breadcrumbItemHidden"><a class="TopBar-module__hfKmSa__breadcrumbPrev" href="index.html" data-i18n="navHomeLabel">Home</a></span><span class="TopBar-module__hfKmSa__breadcrumbItem"><span class="TopBar-module__hfKmSa__breadcrumbSep">/</span><span class="TopBar-module__hfKmSa__breadcrumbCurrent" data-i18n="unilandDocs">Documentation</span></span>
+</nav>
+<div class="TopBar-module__hfKmSa__rightControls">
+<div class="TopBar-module__hfKmSa__settingsBtnWrap">
+<button class="TopBar-module__hfKmSa__settingsBtn" id="settingsBtn" aria-label="Settings"><i class="fas fa-cog"></i></button>
+<span class="TopBar-module__hfKmSa__tooltip" id="settingsTooltip" data-i18n="preferences">Preferences</span>
+</div>
+<div class="TopBar-module__hfKmSa__popup" id="settingsPopup">
+<div class="TopBar-module__hfKmSa__popupSection">
+<div class="TopBar-module__hfKmSa__popupTitle" data-i18n="theme">Theme</div>
+<div class="TopBar-module__hfKmSa__optionRow">
+<button class="TopBar-module__hfKmSa__optionBtn js-theme-btn" data-theme="auto">Auto</button>
+<button class="TopBar-module__hfKmSa__optionBtn js-theme-btn" data-theme="light" aria-label="Light"><i class="fas fa-sun"></i></button>
+<button class="TopBar-module__hfKmSa__optionBtn js-theme-btn" data-theme="dark" aria-label="Dark"><i class="fas fa-moon"></i></button>
+</div>
+</div>
+<div class="TopBar-module__hfKmSa__popupSection">
+<div class="TopBar-module__hfKmSa__popupTitle" data-i18n="language">Language</div>
+<div class="TopBar-module__hfKmSa__optionRow">
+<button class="TopBar-module__hfKmSa__optionBtn js-lang-btn" data-lang="en">EN</button>
+<button class="TopBar-module__hfKmSa__optionBtn js-lang-btn" data-lang="ru">RU</button>
+</div>
+</div>
+<div class="TopBar-module__hfKmSa__popupSection">
+<div class="TopBar-module__hfKmSa__popupTitle" data-i18n="effects">Effects</div>
+<div class="TopBar-module__hfKmSa__optionRow">
+<div class="TopBar-module__hfKmSa__settingsBtnWrap">
+<button class="TopBar-module__hfKmSa__optionBtn" id="particlesBtn" type="button" aria-label="Click particles"><i class="fas fa-wand-magic-sparkles"></i></button>
+<span class="TopBar-module__hfKmSa__tooltip" data-i18n="particles">Click particles</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-module__E0kJGG__container" data-page="docs"><div class="page-module__iRtBbG__container" data-page="docs">
+<main class="page-module__iRtBbG__main">
+<div class="page-module__iRtBbG__body jelly-rise" id="docsBody">
+<p class="page-module__iRtBbG__intro">Полная документация языка из README репозитория. Разделы и номера совпадают с оглавлением справа; у каждого блока кода есть кнопка Copy.</p>
+<h1 id="uniland" class="jelly-drop">UniLand</h1>
+<p class="page-module__iRtBbG__p">UniLand — маленький дружелюбный язык для скриптов: автоматизация, утилиты, работа с файлами, JSON и HTTP, простые оконные и консольные программы. Синтаксис похож на JavaScript, но проще: точки с запятой необязательны, есть шаблонные строки и лямбды, а ещё прямо внутри кода можно вставлять Python.</p>
+<p class="page-module__iRtBbG__p">Интерпретатор написан на Python и запускает файлы <code>.uni</code> из терминала.</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let name = &quot;мир&quot;&#10;print(`Привет, {name}!`)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> name = <span class="page-module__iRtBbG__tokStr">"мир"</span>
+print(<span class="page-module__iRtBbG__tokStr">`Привет, {name}!`</span>)</code></pre></div>
+<hr class="page-module__iRtBbG__hr"><div class="page-module__iRtBbG__section" id="установка">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">1</span><h2 class="page-module__iRtBbG__sectionPlain">Установка</h2></div>
+<p class="page-module__iRtBbG__p">Нужен Python 3.10 или новее.</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="git clone https://github.com/name-cho/uniland&#10;cd uniland&#10;pip install -e ."><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">git</span> clone https://github.com/name-cho/<span class="page-module__iRtBbG__tokKey">uniland</span>
+<span class="page-module__iRtBbG__tokKey">cd</span> <span class="page-module__iRtBbG__tokKey">uniland</span>
+<span class="page-module__iRtBbG__tokKey">pip</span> install -e .</code></pre></div>
+<p class="page-module__iRtBbG__p">После этого команда <code>uniland</code> доступна в терминале и запускается из любого места (кроссплатформенно):</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="uniland run script.uni&#10;uniland --version"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">uniland</span> run script.uni
+<span class="page-module__iRtBbG__tokKey">uniland</span> --version</code></pre></div>
+<div class="page-module__iRtBbG__subsection" id="без-pip"><h3>Без pip</h3>
+<p class="page-module__iRtBbG__p">Ядро языка работает на голом Python — можно вообще ничего не устанавливать. Из корня репозитория:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="python -m uniland run script.uni"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">python</span> -m <span class="page-module__iRtBbG__tokKey">uniland</span> run script.uni</code></pre></div>
+<p class="page-module__iRtBbG__p">Чтобы получить глобальную команду <code>uniland</code> без pip — запусти установщик (он создаёт лаунчер и работает из любой папки):</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="bash install.sh                 # Linux / macOS  → ~/.local/bin/uniland&#10;powershell -ExecutionPolicy Bypass -File install.ps1   # Windows"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">bash</span> install.sh                 # Linux / macOS  → ~/.local/bin/<span class="page-module__iRtBbG__tokKey">uniland</span>
+<span class="page-module__iRtBbG__tokKey">powershell</span> -ExecutionPolicy Bypass -File install.ps1   # Windows</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="команды"><h3>Команды</h3>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="uniland run FILE [args...]   # запустить скрипт (-d/--debug — показать токены)&#10;uniland -e &quot;print(2+2)&quot;      # выполнить код одной строкой (или: uniland eval &quot;...&quot;)&#10;uniland -i                   # интерактивный режим REPL (или: uniland repl)&#10;uniland -c FILE              # проверить синтаксис без запуска (или: uniland check FILE)&#10;uniland -v                   # версия"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">uniland</span> run FILE [args...]   # запустить скрипт (-d/--debug — показать токены)
+<span class="page-module__iRtBbG__tokKey">uniland</span> -e <span class="page-module__iRtBbG__tokStr">"print(2+2)"</span><span class="page-module__iRtBbG__tokComment">      # выполнить код одной строкой (или: uniland eval "...")</span>
+<span class="page-module__iRtBbG__tokKey">uniland</span> -i                   # интерактивный режим REPL (или: <span class="page-module__iRtBbG__tokKey">uniland</span> repl)
+<span class="page-module__iRtBbG__tokKey">uniland</span> -c FILE              # проверить синтаксис без запуска (или: <span class="page-module__iRtBbG__tokKey">uniland</span> check FILE)
+<span class="page-module__iRtBbG__tokKey">uniland</span> -v                   # версия</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="зависимости"><h3>Зависимости</h3>
+<p class="page-module__iRtBbG__p">Ядро — без сторонних пакетов. При установке через pip автоматически ставится <strong>Pillow</strong>, чтобы картинки всех форматов (jpg/webp/…) и ресайз работали из коробки. Без Pillow нативно поддерживаются png/gif. Опциональные дополнения:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="pip install -e &quot;.[video]&quot;   # видео в окне (imageio + ffmpeg)&#10;pip install -e &quot;.[http]&quot;    # функции http_*  (requests)&#10;pip install -e &quot;.[all]&quot;     # всё сразу"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">pip</span> install -e <span class="page-module__iRtBbG__tokStr">".[video]"</span><span class="page-module__iRtBbG__tokComment">   # видео в окне (imageio + ffmpeg)</span>
+<span class="page-module__iRtBbG__tokKey">pip</span> install -e <span class="page-module__iRtBbG__tokStr">".[http]"</span><span class="page-module__iRtBbG__tokComment">    # функции http_*  (requests)</span>
+<span class="page-module__iRtBbG__tokKey">pip</span> install -e <span class="page-module__iRtBbG__tokStr">".[all]"</span><span class="page-module__iRtBbG__tokComment">     # всё сразу</span></code></pre></div>
+<p class="page-module__iRtBbG__p">GUI работает на стандартном <code>tkinter</code>, который идёт вместе с Python.</p>
+<hr class="page-module__iRtBbG__hr">
+</div></div><div class="page-module__iRtBbG__section" id="первая-программа">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">2</span><h2 class="page-module__iRtBbG__sectionPlain">Первая программа</h2></div>
+<p class="page-module__iRtBbG__p">Создай файл <code>hello.uni</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="print(&quot;Привет, UniLand!&quot;)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>print(<span class="page-module__iRtBbG__tokStr">"Привет, UniLand!"</span>)</code></pre></div>
+<p class="page-module__iRtBbG__p">Запусти:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="uniland run hello.uni"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">uniland</span> run hello.uni</code></pre></div>
+<p class="page-module__iRtBbG__p">Готово. Теперь по порядку обо всём.</p>
+<hr class="page-module__iRtBbG__hr">
+</div><div class="page-module__iRtBbG__section" id="курс-основы-языка">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">3</span><h2 class="page-module__iRtBbG__sectionPlain">Курс: основы языка</h2></div>
+<div class="page-module__iRtBbG__subsection" id="переменные"><h3>Переменные</h3>
+<p class="page-module__iRtBbG__p"><code>let</code> — обычная переменная, <code>const</code> — та, которую нельзя менять.</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let x = 10&#10;x = x + 5        // ок&#10;&#10;const PI = 3.14&#10;// PI = 3        // ошибка: нельзя менять константу"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> x = <span class="page-module__iRtBbG__tokNum">10</span>
+x = x + <span class="page-module__iRtBbG__tokNum">5</span><span class="page-module__iRtBbG__tokComment">        // ок</span>
+
+<span class="page-module__iRtBbG__tokKey">const</span> PI = <span class="page-module__iRtBbG__tokNum">3.14</span>
+<span class="page-module__iRtBbG__tokComment">// PI = 3        // ошибка: нельзя менять константу</span></code></pre></div>
+<p class="page-module__iRtBbG__p">Точка с запятой в конце строки <strong>необязательна</strong> — перенос строки сам завершает инструкцию. Хочешь несколько команд в одной строке — раздели их <code>;</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let a = 1; let b = 2; print(a + b)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> a = <span class="page-module__iRtBbG__tokNum">1</span>; <span class="page-module__iRtBbG__tokKey">let</span> b = <span class="page-module__iRtBbG__tokNum">2</span>; print(a + b)</code></pre></div>
+<p class="page-module__iRtBbG__p">Комментарии:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// однострочный&#10;# тоже однострочный&#10;/* многострочный */"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// однострочный</span>
+<span class="page-module__iRtBbG__tokComment"># тоже однострочный</span>
+/* многострочный */</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="типы-данных"><h3>Типы данных</h3>
+<table class="page-module__iRtBbG__mdTable"><thead><tr><th>Тип</th><th>Пример</th></tr></thead><tbody><tr><td>число</td><td><code>42</code>, <code>3.14</code>, <code>-7</code></td></tr><tr><td>строка</td><td><code>"привет"</code>, <code>`шаблон`</code></td></tr><tr><td>логический</td><td><code>true</code>, <code>false</code></td></tr><tr><td>пусто</td><td><code>null</code></td></tr><tr><td>массив</td><td><code>[1, 2, 3]</code></td></tr><tr><td>объект</td><td><code>{name: "Аня", age: 20}</code></td></tr><tr><td>функция</td><td><code>x =&gt; x + 1</code></td></tr></tbody></table>
+<p class="page-module__iRtBbG__p">Узнать тип значения:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="print(typeof(42))        // &quot;number&quot;&#10;print(typeof(&quot;hi&quot;))      // &quot;string&quot;&#10;print(typeof([1, 2]))    // &quot;array&quot;"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>print(<span class="page-module__iRtBbG__tokKey">typeof</span>(<span class="page-module__iRtBbG__tokNum">42</span>))        // <span class="page-module__iRtBbG__tokStr">"number"</span>
+print(<span class="page-module__iRtBbG__tokKey">typeof</span>(<span class="page-module__iRtBbG__tokStr">"hi"</span>))      // <span class="page-module__iRtBbG__tokStr">"string"</span>
+print(<span class="page-module__iRtBbG__tokKey">typeof</span>([<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>]))    // <span class="page-module__iRtBbG__tokStr">"array"</span></code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="строки-и-шаблоны"><h3>Строки и шаблоны</h3>
+<p class="page-module__iRtBbG__p">Обычные строки — в двойных кавычках. Сложение строк работает через <code>+</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let name = &quot;Аня&quot;&#10;print(&quot;Привет, &quot; + name)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> name = <span class="page-module__iRtBbG__tokStr">"Аня"</span>
+print(<span class="page-module__iRtBbG__tokStr">"Привет, "</span> + name)</code></pre></div>
+<p class="page-module__iRtBbG__p"><strong>Шаблонные строки</strong> — в обратных кавычках <code>`</code>. Внутри <code>{ }</code> можно вставлять любые выражения, а сама строка может быть многострочной:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let a = 2&#10;let b = 3&#10;print(`{a} + {b} = {a + b}`)     // 2 + 3 = 5&#10;&#10;print(`Несколько&#10;строк подряд`)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> a = <span class="page-module__iRtBbG__tokNum">2</span>
+<span class="page-module__iRtBbG__tokKey">let</span> b = <span class="page-module__iRtBbG__tokNum">3</span>
+print(<span class="page-module__iRtBbG__tokStr">`{a} + {b} = {a + b}`</span>)     // <span class="page-module__iRtBbG__tokNum">2</span> + <span class="page-module__iRtBbG__tokNum">3</span> = <span class="page-module__iRtBbG__tokNum">5</span>
+
+print(<span class="page-module__iRtBbG__tokStr">`Несколько
+строк подряд`</span>)</code></pre></div>
+<p class="page-module__iRtBbG__p">Чтобы написать настоящую фигурную скобку — удвой её: <code>{{</code> и <code>}}</code>.</p>
+<p class="page-module__iRtBbG__p">Полезные функции для строк:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="uppercase(&quot;hi&quot;)            // &quot;HI&quot;&#10;lowercase(&quot;HI&quot;)            // &quot;hi&quot;&#10;trim(&quot;  hi  &quot;)             // &quot;hi&quot;&#10;split(&quot;a,b,c&quot;, &quot;,&quot;)        // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]&#10;join([&quot;a&quot;, &quot;b&quot;], &quot;-&quot;)      // &quot;a-b&quot;&#10;replace(&quot;abc&quot;, &quot;b&quot;, &quot;X&quot;)   // &quot;aXc&quot;&#10;substring(&quot;hello&quot;, 1, 4)   // &quot;ell&quot;&#10;length(&quot;hello&quot;)            // 5&#10;includes(&quot;hello&quot;, &quot;ell&quot;)   // true&#10;&quot;hello&quot;[0]                 // &quot;h&quot;"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>uppercase(<span class="page-module__iRtBbG__tokStr">"hi"</span>)            // <span class="page-module__iRtBbG__tokStr">"HI"</span>
+lowercase(<span class="page-module__iRtBbG__tokStr">"HI"</span>)            // <span class="page-module__iRtBbG__tokStr">"hi"</span>
+trim(<span class="page-module__iRtBbG__tokStr">"  hi  "</span>)             // <span class="page-module__iRtBbG__tokStr">"hi"</span>
+split(<span class="page-module__iRtBbG__tokStr">"a,b,c"</span>, <span class="page-module__iRtBbG__tokStr">","</span>)        // [<span class="page-module__iRtBbG__tokStr">"a"</span>, <span class="page-module__iRtBbG__tokStr">"b"</span>, <span class="page-module__iRtBbG__tokStr">"c"</span>]
+join([<span class="page-module__iRtBbG__tokStr">"a"</span>, <span class="page-module__iRtBbG__tokStr">"b"</span>], <span class="page-module__iRtBbG__tokStr">"-"</span>)      // <span class="page-module__iRtBbG__tokStr">"a-b"</span>
+replace(<span class="page-module__iRtBbG__tokStr">"abc"</span>, <span class="page-module__iRtBbG__tokStr">"b"</span>, <span class="page-module__iRtBbG__tokStr">"X"</span>)   // <span class="page-module__iRtBbG__tokStr">"aXc"</span>
+substring(<span class="page-module__iRtBbG__tokStr">"hello"</span>, <span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">4</span>)   // <span class="page-module__iRtBbG__tokStr">"ell"</span>
+length(<span class="page-module__iRtBbG__tokStr">"hello"</span>)            // <span class="page-module__iRtBbG__tokNum">5</span>
+includes(<span class="page-module__iRtBbG__tokStr">"hello"</span>, <span class="page-module__iRtBbG__tokStr">"ell"</span>)   // <span class="page-module__iRtBbG__tokKey">true</span>
+<span class="page-module__iRtBbG__tokStr">"hello"</span>[<span class="page-module__iRtBbG__tokNum">0</span>]                 // <span class="page-module__iRtBbG__tokStr">"h"</span></code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="операторы"><h3>Операторы</h3>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">text</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="Арифметика:   +  -  *  /  %  ^        (^ — возведение в степень)&#10;Сравнение:    ==  !=  &lt;  &gt;  &lt;=  &gt;=&#10;Логика:       &amp;&amp;  ||  !&#10;Присваивание: =  +=  -=  *=  /=  %=  ++  --"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>Арифметика:   +  -  *  /  %  ^        (^ — возведение в степень)
+Сравнение:    ==  !=  &lt;  &gt;  &lt;=  &gt;=
+Логика:       &amp;&amp;  ||  !
+Присваивание: =  +=  -=  *=  /=  %=  ++  --</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let n = 5&#10;n += 3          // 8&#10;n++             // 9&#10;print(2 ^ 10)   // 1024&#10;print(7 % 3)    // 1"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> n = <span class="page-module__iRtBbG__tokNum">5</span>
+n += <span class="page-module__iRtBbG__tokNum">3</span><span class="page-module__iRtBbG__tokComment">          // 8</span>
+n++             // <span class="page-module__iRtBbG__tokNum">9</span>
+print(<span class="page-module__iRtBbG__tokNum">2</span> ^ <span class="page-module__iRtBbG__tokNum">10</span>)   // <span class="page-module__iRtBbG__tokNum">1024</span>
+print(<span class="page-module__iRtBbG__tokNum">7</span> % <span class="page-module__iRtBbG__tokNum">3</span>)    // <span class="page-module__iRtBbG__tokNum">1</span></code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="условия"><h3>Условия</h3>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let age = 18&#10;&#10;if (age &gt;= 18) {&#10;    print(&quot;совершеннолетний&quot;)&#10;} else if (age &gt;= 14) {&#10;    print(&quot;подросток&quot;)&#10;} else {&#10;    print(&quot;ребёнок&quot;)&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> age = <span class="page-module__iRtBbG__tokNum">18</span>
+
+<span class="page-module__iRtBbG__tokKey">if</span> (age &gt;= <span class="page-module__iRtBbG__tokNum">18</span>) {
+    print(<span class="page-module__iRtBbG__tokStr">"совершеннолетний"</span>)
+} <span class="page-module__iRtBbG__tokKey">else</span> <span class="page-module__iRtBbG__tokKey">if</span> (age &gt;= <span class="page-module__iRtBbG__tokNum">14</span>) {
+    print(<span class="page-module__iRtBbG__tokStr">"подросток"</span>)
+} <span class="page-module__iRtBbG__tokKey">else</span> {
+    print(<span class="page-module__iRtBbG__tokStr">"ребёнок"</span>)
+}</code></pre></div>
+<p class="page-module__iRtBbG__p">«Истинно» — это любое ненулевое число, непустая строка/массив/объект и <code>true</code>. «Ложно» — <code>false</code>, <code>0</code>, <code>""</code>, пустые <code>[]</code> / <code>{}</code>, <code>null</code>.</p>
+</div><div class="page-module__iRtBbG__subsection" id="циклы"><h3>Циклы</h3>
+<p class="page-module__iRtBbG__p">Классический <code>for</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="for (let i = 0; i &lt; 3; i++) {&#10;    print(i)        // 0, 1, 2&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">for</span> (<span class="page-module__iRtBbG__tokKey">let</span> i = <span class="page-module__iRtBbG__tokNum">0</span>; i &lt; <span class="page-module__iRtBbG__tokNum">3</span>; i++) {
+    print(i)        // <span class="page-module__iRtBbG__tokNum">0</span>, <span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>
+}</code></pre></div>
+<p class="page-module__iRtBbG__p"><code>for ... in</code> — перебор массива, строки или ключей объекта:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="for (item in [10, 20, 30]) {&#10;    print(item)&#10;}&#10;&#10;for (ch in &quot;abc&quot;) {&#10;    print(ch)&#10;}&#10;&#10;let user = {name: &quot;Аня&quot;, age: 20}&#10;for (key in user) {&#10;    print(key, &quot;=&quot;, user[key])&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">for</span> (item <span class="page-module__iRtBbG__tokKey">in</span> [<span class="page-module__iRtBbG__tokNum">10</span>, <span class="page-module__iRtBbG__tokNum">20</span>, <span class="page-module__iRtBbG__tokNum">30</span>]) {
+    print(item)
+}
+
+<span class="page-module__iRtBbG__tokKey">for</span> (ch <span class="page-module__iRtBbG__tokKey">in</span> <span class="page-module__iRtBbG__tokStr">"abc"</span>) {
+    print(ch)
+}
+
+<span class="page-module__iRtBbG__tokKey">let</span> user = {name: <span class="page-module__iRtBbG__tokStr">"Аня"</span>, age: <span class="page-module__iRtBbG__tokNum">20</span>}
+<span class="page-module__iRtBbG__tokKey">for</span> (key <span class="page-module__iRtBbG__tokKey">in</span> user) {
+    print(key, <span class="page-module__iRtBbG__tokStr">"="</span>, user[key])
+}</code></pre></div>
+<p class="page-module__iRtBbG__p"><code>while</code>, а также <code>break</code> и <code>continue</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let n = 0&#10;while (n &lt; 100) {&#10;    n++&#10;    if (n == 5) { break }&#10;    if (n % 2 == 0) { continue }&#10;    print(n)&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> n = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">while</span> (n &lt; <span class="page-module__iRtBbG__tokNum">100</span>) {
+    n++
+    <span class="page-module__iRtBbG__tokKey">if</span> (n == <span class="page-module__iRtBbG__tokNum">5</span>) { <span class="page-module__iRtBbG__tokKey">break</span> }
+    <span class="page-module__iRtBbG__tokKey">if</span> (n % <span class="page-module__iRtBbG__tokNum">2</span> == <span class="page-module__iRtBbG__tokNum">0</span>) { <span class="page-module__iRtBbG__tokKey">continue</span> }
+    print(n)
+}</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="функции-и-лямбды"><h3>Функции и лямбды</h3>
+<p class="page-module__iRtBbG__p">Объявление через <code>func</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="func add(a, b) {&#10;    return a + b&#10;}&#10;print(add(2, 3))    // 5"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>func add(a, b) {
+    <span class="page-module__iRtBbG__tokKey">return</span> a + b
+}
+print(add(<span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>))    // <span class="page-module__iRtBbG__tokNum">5</span></code></pre></div>
+<p class="page-module__iRtBbG__p">Функции — это значения: их можно класть в переменные, передавать в другие функции и возвращать. Короткая запись — <strong>лямбда</strong> через <code>=&gt;</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let square = x =&gt; x * x&#10;let sum = (a, b) =&gt; a + b&#10;&#10;print(square(5))    // 25&#10;print(sum(2, 3))    // 5"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> square = x =&gt; x * x
+<span class="page-module__iRtBbG__tokKey">let</span> sum = (a, b) =&gt; a + b
+
+print(square(<span class="page-module__iRtBbG__tokNum">5</span>))    // <span class="page-module__iRtBbG__tokNum">25</span>
+print(sum(<span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>))    // <span class="page-module__iRtBbG__tokNum">5</span></code></pre></div>
+<p class="page-module__iRtBbG__p">Замыкания (функция помнит окружение, где её создали):</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="func adder(step) {&#10;    return x =&gt; x + step&#10;}&#10;let add10 = adder(10)&#10;print(add10(5))     // 15"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>func adder(step) {
+    <span class="page-module__iRtBbG__tokKey">return</span> x =&gt; x + step
+}
+<span class="page-module__iRtBbG__tokKey">let</span> add10 = adder(<span class="page-module__iRtBbG__tokNum">10</span>)
+print(add10(<span class="page-module__iRtBbG__tokNum">5</span>))     // <span class="page-module__iRtBbG__tokNum">15</span></code></pre></div>
+<p class="page-module__iRtBbG__p">Если в файле есть функция <code>main()</code> без аргументов, она запустится автоматически после загрузки файла.</p>
+</div><div class="page-module__iRtBbG__subsection" id="массивы"><h3>Массивы</h3>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let arr = [3, 1, 2]&#10;&#10;push(arr, 4)            // [3, 1, 2, 4]&#10;pop(arr)                // 4, массив снова [3, 1, 2]&#10;arr[0]                  // 3&#10;arr[0] = 99             // меняем элемент&#10;length(arr)             // 3&#10;sort(arr)               // [1, 2, 99]&#10;reverse(arr)            // [99, 2, 1]"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> arr = [<span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>]
+
+push(arr, <span class="page-module__iRtBbG__tokNum">4</span>)            // [<span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">4</span>]
+pop(arr)                // <span class="page-module__iRtBbG__tokNum">4</span>, массив снова [<span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>]
+arr[<span class="page-module__iRtBbG__tokNum">0</span>]                  // <span class="page-module__iRtBbG__tokNum">3</span>
+arr[<span class="page-module__iRtBbG__tokNum">0</span>] = <span class="page-module__iRtBbG__tokNum">99</span><span class="page-module__iRtBbG__tokComment">             // меняем элемент</span>
+length(arr)             // <span class="page-module__iRtBbG__tokNum">3</span>
+sort(arr)               // [<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">99</span>]
+reverse(arr)            // [<span class="page-module__iRtBbG__tokNum">99</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">1</span>]</code></pre></div>
+<p class="page-module__iRtBbG__p">Функции высшего порядка — здесь лямбды особенно удобны:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let nums = [1, 2, 3, 4, 5]&#10;&#10;map(nums, x =&gt; x * 2)               // [2, 4, 6, 8, 10]&#10;filter(nums, x =&gt; x % 2 == 0)       // [2, 4]&#10;reduce(nums, (a, b) =&gt; a + b, 0)    // 15&#10;find(nums, x =&gt; x &gt; 3)              // 4&#10;range(1, 6)                         // [1, 2, 3, 4, 5]"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> nums = [<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">4</span>, <span class="page-module__iRtBbG__tokNum">5</span>]
+
+map(nums, x =&gt; x * <span class="page-module__iRtBbG__tokNum">2</span>)               // [<span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">4</span>, <span class="page-module__iRtBbG__tokNum">6</span>, <span class="page-module__iRtBbG__tokNum">8</span>, <span class="page-module__iRtBbG__tokNum">10</span>]
+filter(nums, x =&gt; x % <span class="page-module__iRtBbG__tokNum">2</span> == <span class="page-module__iRtBbG__tokNum">0</span>)       // [<span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">4</span>]
+reduce(nums, (a, b) =&gt; a + b, <span class="page-module__iRtBbG__tokNum">0</span>)    // <span class="page-module__iRtBbG__tokNum">15</span>
+find(nums, x =&gt; x &gt; <span class="page-module__iRtBbG__tokNum">3</span>)              // <span class="page-module__iRtBbG__tokNum">4</span>
+range(<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">6</span>)                         // [<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">4</span>, <span class="page-module__iRtBbG__tokNum">5</span>]</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="объекты"><h3>Объекты</h3>
+<p class="page-module__iRtBbG__p">Объект — это набор пар «ключ — значение».</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let user = {name: &quot;Аня&quot;, age: 20}&#10;&#10;user.name          // &quot;Аня&quot;    (через точку)&#10;user[&quot;age&quot;]        // 20       (через ключ)&#10;&#10;user.age = 21      // изменить&#10;user.city = &quot;Питер&quot;// добавить новое поле&#10;&#10;keys(user)         // [&quot;name&quot;, &quot;age&quot;, &quot;city&quot;]&#10;values(user)       // [&quot;Аня&quot;, 21, &quot;Питер&quot;]&#10;has(user, &quot;name&quot;)  // true&#10;merge(user, {x: 1})// новый объект из двух"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> user = {name: <span class="page-module__iRtBbG__tokStr">"Аня"</span>, age: <span class="page-module__iRtBbG__tokNum">20</span>}
+
+user.name          // <span class="page-module__iRtBbG__tokStr">"Аня"</span>    (через точку)
+user[<span class="page-module__iRtBbG__tokStr">"age"</span>]        // <span class="page-module__iRtBbG__tokNum">20</span>       (через ключ)
+
+user.age = <span class="page-module__iRtBbG__tokNum">21</span><span class="page-module__iRtBbG__tokComment">      // изменить</span>
+user.city = <span class="page-module__iRtBbG__tokStr">"Питер"</span><span class="page-module__iRtBbG__tokComment">// добавить новое поле</span>
+
+keys(user)         // [<span class="page-module__iRtBbG__tokStr">"name"</span>, <span class="page-module__iRtBbG__tokStr">"age"</span>, <span class="page-module__iRtBbG__tokStr">"city"</span>]
+values(user)       // [<span class="page-module__iRtBbG__tokStr">"Аня"</span>, <span class="page-module__iRtBbG__tokNum">21</span>, <span class="page-module__iRtBbG__tokStr">"Питер"</span>]
+has(user, <span class="page-module__iRtBbG__tokStr">"name"</span>)  // <span class="page-module__iRtBbG__tokKey">true</span>
+merge(user, {x: <span class="page-module__iRtBbG__tokNum">1</span>})// новый объект из двух</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="обработка-ошибок"><h3>Обработка ошибок</h3>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="try {&#10;    let data = read_file(&quot;нет-такого-файла.txt&quot;)&#10;} catch (e) {&#10;    print(&quot;Что-то пошло не так:&quot;, e)&#10;} finally {&#10;    print(&quot;Этот блок выполнится в любом случае&quot;)&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">try</span> {
+    <span class="page-module__iRtBbG__tokKey">let</span> data = read_file(<span class="page-module__iRtBbG__tokStr">"нет-такого-файла.txt"</span>)
+} <span class="page-module__iRtBbG__tokKey">catch</span> (e) {
+    print(<span class="page-module__iRtBbG__tokStr">"Что-то пошло не так:"</span>, e)
+} <span class="page-module__iRtBbG__tokKey">finally</span> {
+    print(<span class="page-module__iRtBbG__tokStr">"Этот блок выполнится в любом случае"</span>)
+}</code></pre></div>
+<p class="page-module__iRtBbG__p">Свою ошибку можно бросить через <code>throw</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="func divide(a, b) {&#10;    if (b == 0) { throw &quot;Деление на ноль!&quot; }&#10;    return a / b&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>func divide(a, b) {
+    <span class="page-module__iRtBbG__tokKey">if</span> (b == <span class="page-module__iRtBbG__tokNum">0</span>) { <span class="page-module__iRtBbG__tokKey">throw</span> <span class="page-module__iRtBbG__tokStr">"Деление на ноль!"</span> }
+    <span class="page-module__iRtBbG__tokKey">return</span> a / b
+}</code></pre></div>
+</div><div class="page-module__iRtBbG__subsection" id="ввод-и-долгоживущие-скрипты"><h3>Ввод и долгоживущие скрипты</h3>
+<p class="page-module__iRtBbG__p">Спросить что-то у пользователя в консоли — <code>input</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let name = input(&quot;Как тебя зовут? &quot;)&#10;print(`Привет, {name}!`)&#10;&#10;let age = input(&quot;Сколько тебе лет? &quot;)&#10;print(`Через год будет {to_number(age) + 1}.`)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> name = input(<span class="page-module__iRtBbG__tokStr">"Как тебя зовут? "</span>)
+print(<span class="page-module__iRtBbG__tokStr">`Привет, {name}!`</span>)
+
+<span class="page-module__iRtBbG__tokKey">let</span> age = input(<span class="page-module__iRtBbG__tokStr">"Сколько тебе лет? "</span>)
+print(<span class="page-module__iRtBbG__tokStr">`Через год будет {to_number(age) + 1}.`</span>)</code></pre></div>
+<p class="page-module__iRtBbG__p">Скрипт может работать сколько угодно и не завершаться — например, как простая служба или бот. Для этого используй бесконечный цикл и паузу <code>sleep</code> (в миллисекундах). Остановить — <code>Ctrl+C</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let tick = 0&#10;while (true) {&#10;    tick += 1&#10;    log_info(`тик #{tick}`)&#10;    sleep(1000)     // ждём секунду&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> tick = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">while</span> (<span class="page-module__iRtBbG__tokKey">true</span>) {
+    tick += <span class="page-module__iRtBbG__tokNum">1</span>
+    log_info(<span class="page-module__iRtBbG__tokStr">`тик #{tick}`</span>)
+    sleep(<span class="page-module__iRtBbG__tokNum">1000</span>)     // ждём секунду
+}</code></pre></div>
+<hr class="page-module__iRtBbG__hr">
+</div></div><div class="page-module__iRtBbG__section" id="gui-оконные-программы">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">4</span><h2 class="page-module__iRtBbG__sectionPlain">GUI: оконные программы</h2></div>
+<p class="page-module__iRtBbG__p">Окна делаются на <code>tkinter</code> (входит в Python, ставить ничего не нужно). Кнопки принимают функцию-обработчик — отлично сочетается с лямбдами.</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let win = gui_window(&quot;Моё окно&quot;, 320, 160)&#10;gui_label(win, &quot;Как тебя зовут?&quot;)&#10;let field = gui_input(win, &quot;&quot;)&#10;let out = gui_label(win, &quot;&quot;)&#10;&#10;gui_button(win, &quot;Поздороваться&quot;, () =&gt; {&#10;    gui_set(out, `Привет, {gui_get(field)}!`)&#10;})&#10;&#10;gui_run(win)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> win = gui_window(<span class="page-module__iRtBbG__tokStr">"Моё окно"</span>, <span class="page-module__iRtBbG__tokNum">320</span>, <span class="page-module__iRtBbG__tokNum">160</span>)
+gui_label(win, <span class="page-module__iRtBbG__tokStr">"Как тебя зовут?"</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> field = gui_input(win, <span class="page-module__iRtBbG__tokStr">""</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> out = gui_label(win, <span class="page-module__iRtBbG__tokStr">""</span>)
+
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Поздороваться"</span>, () =&gt; {
+    gui_set(out, <span class="page-module__iRtBbG__tokStr">`Привет, {gui_get(field)}!`</span>)
+})
+
+gui_run(win)</code></pre></div>
+<p class="page-module__iRtBbG__p">Функции GUI:</p>
+<table class="page-module__iRtBbG__mdTable"><thead><tr><th>Функция</th><th>Что делает</th></tr></thead><tbody><tr><td><code>gui_window(title, width, height)</code></td><td>создаёт окно</td></tr><tr><td><code>gui_label(win, text)</code></td><td>надпись</td></tr><tr><td><code>gui_input(win, placeholder)</code></td><td>поле ввода</td></tr><tr><td><code>gui_button(win, text, onClick)</code></td><td>кнопка с обработчиком</td></tr><tr><td><code>gui_get(widget)</code></td><td>получить текст из поля/надписи</td></tr><tr><td><code>gui_set(widget, text)</code></td><td>задать текст</td></tr><tr><td><code>gui_run(win)</code></td><td>показать окно (запустить цикл)</td></tr><tr><td><code>gui_close(win)</code></td><td>закрыть окно</td></tr><tr><td><code>gui_on_close(win, fn)</code></td><td>вызвать <code>fn</code> при закрытии окна (напр. автосохранение)</td></tr></tbody></table>
+<div class="page-module__iRtBbG__subsection" id="картинки-gif-и-видео"><h3>Картинки, GIF и видео</h3>
+<p class="page-module__iRtBbG__p">Картинки можно показывать и делать кнопкой — прямо, без Python-вставок. Необязательные <code>width, height</code> задают размер. png/gif работают всегда; jpg/webp и ресайз — при установленном Pillow.</p>
+<table class="page-module__iRtBbG__mdTable"><thead><tr><th>Функция</th><th>Что делает</th></tr></thead><tbody><tr><td><code>gui_image(win, path[, w, h])</code></td><td>показать картинку</td></tr><tr><td><code>gui_image_button(win, path, onClick[, w, h])</code></td><td><strong>кнопка-картинка</strong></td></tr><tr><td><code>gui_gif(win, path[, w, h])</code></td><td>анимированный GIF (нативно)</td></tr><tr><td><code>gui_video(win, path)</code></td><td>видео в окне (нужен <code>[video]</code>; иначе откроется во внешнем плеере)</td></tr></tbody></table>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let win = gui_window(&quot;Кликер&quot;, 300, 300)&#10;let out = gui_label(win, &quot;0&quot;)&#10;let n = 0&#10;gui_image_button(win, &quot;button.png&quot;, () =&gt; { n += 1; gui_set(out, to_string(n)) }, 128, 128)&#10;gui_run(win)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> win = gui_window(<span class="page-module__iRtBbG__tokStr">"Кликер"</span>, <span class="page-module__iRtBbG__tokNum">300</span>, <span class="page-module__iRtBbG__tokNum">300</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> out = gui_label(win, <span class="page-module__iRtBbG__tokStr">"0"</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> n = <span class="page-module__iRtBbG__tokNum">0</span>
+gui_image_button(win, <span class="page-module__iRtBbG__tokStr">"button.png"</span>, () =&gt; { n += <span class="page-module__iRtBbG__tokNum">1</span>; gui_set(out, to_string(n)) }, <span class="page-module__iRtBbG__tokNum">128</span>, <span class="page-module__iRtBbG__tokNum">128</span>)
+gui_run(win)</code></pre></div>
+<p class="page-module__iRtBbG__p">Выбор файлов через системные диалоги (возвращают путь или <code>null</code>):</p>
+<table class="page-module__iRtBbG__mdTable"><thead><tr><th>Функция</th><th>Что делает</th></tr></thead><tbody><tr><td><code>pick_file([title])</code></td><td>выбрать существующий файл</td></tr><tr><td><code>pick_save([title])</code></td><td>выбрать путь «сохранить как»</td></tr><tr><td><code>pick_folder([title])</code></td><td>выбрать папку</td></tr></tbody></table>
+<p class="page-module__iRtBbG__p">Диалоги (можно без своего окна):</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="alert(&quot;Привет!&quot;)&#10;let ok = confirm(&quot;Продолжить?&quot;)        // true / false&#10;let name = prompt(&quot;Как тебя зовут?&quot;)   // введённая строка или null"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code>alert(<span class="page-module__iRtBbG__tokStr">"Привет!"</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> ok = confirm(<span class="page-module__iRtBbG__tokStr">"Продолжить?"</span>)        // <span class="page-module__iRtBbG__tokKey">true</span> / <span class="page-module__iRtBbG__tokKey">false</span>
+<span class="page-module__iRtBbG__tokKey">let</span> name = prompt(<span class="page-module__iRtBbG__tokStr">"Как тебя зовут?"</span>)   // введённая строка или <span class="page-module__iRtBbG__tokKey">null</span></code></pre></div>
+<hr class="page-module__iRtBbG__hr">
+</div></div><div class="page-module__iRtBbG__section" id="python-внутри-uniland">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">5</span><h2 class="page-module__iRtBbG__sectionPlain">Python внутри UniLand</h2></div>
+<p class="page-module__iRtBbG__p">Иногда нужна сила Python — целая стандартная библиотека и любые пакеты. Просто положи Python-код в блок <code>python { ... }</code>. Обмен данными — через объект <code>uni</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="python {&#10;    import math&#10;    uni.phi = (1 + math.sqrt(5)) / 2     # отдаём значение в UniLand&#10;}&#10;print(&quot;Золотое сечение:&quot;, round(phi, 4))   // 1.618"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">python</span> {
+    <span class="page-module__iRtBbG__tokKey">import</span> math
+    uni.phi = (<span class="page-module__iRtBbG__tokNum">1</span> + math.sqrt(<span class="page-module__iRtBbG__tokNum">5</span>)) / <span class="page-module__iRtBbG__tokNum">2</span><span class="page-module__iRtBbG__tokComment">     # отдаём значение в UniLand</span>
+}
+print(<span class="page-module__iRtBbG__tokStr">"Золотое сечение:"</span>, round(phi, <span class="page-module__iRtBbG__tokNum">4</span>))   // <span class="page-module__iRtBbG__tokNum">1.618</span></code></pre></div>
+<ul><li><code>uni.имя = значение</code> — создать/изменить переменную UniLand из Python.</li><li><code>uni.имя</code> — прочитать переменную UniLand в Python.</li><li><code>uni.call("func", args...)</code> — вызвать функцию UniLand из Python.</li></ul>
+<p class="page-module__iRtBbG__p">Быстрые однострочники без блока:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let x = pyeval(&quot;2 ** 100&quot;)                  // вычислить выражение Python и вернуть результат&#10;pyexec(&quot;import os; print(os.getcwd())&quot;)     // выполнить код"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> x = pyeval(<span class="page-module__iRtBbG__tokStr">"2 ** 100"</span>)                  // вычислить выражение Python и вернуть результат
+pyexec(<span class="page-module__iRtBbG__tokStr">"import os; print(os.getcwd())"</span>)     // выполнить код</code></pre></div>
+<div class="page-module__iRtBbG__note"><i class="fas fa-circle-info"></i><p>Python-блок выполняется с полными правами Python — как обычный скрипт.</p></div>
+<hr class="page-module__iRtBbG__hr">
+</div><div class="page-module__iRtBbG__section" id="справочник-встроенных-функций">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">6</span><h2 class="page-module__iRtBbG__sectionPlain">Справочник встроенных функций</h2></div>
+<p class="page-module__iRtBbG__p"><strong>Вывод и ввод</strong> <code>print(...)</code>, <code>output(...)</code>, <code>input(prompt)</code>, <code>log_info(...)</code>, <code>log_debug(...)</code>, <code>log_warn(...)</code>, <code>log_error(...)</code>, <code>log_fatal(...)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Типы и преобразования</strong> <code>typeof(v)</code>, <code>to_string(v)</code>, <code>to_number(v)</code>, <code>to_boolean(v)</code>, <code>is_number(v)</code>, <code>is_string(v)</code>, <code>is_array(v)</code>, <code>is_object(v)</code>, <code>is_boolean(v)</code>, <code>is_null(v)</code>, <code>is_function(v)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Строки</strong> <code>length(s)</code>, <code>split(s, sep)</code>, <code>join(arr, sep)</code>, <code>replace(s, a, b)</code>, <code>substring(s, start, end)</code>, <code>trim(s)</code>, <code>uppercase(s)</code>, <code>lowercase(s)</code>, <code>startswith(s, p)</code>, <code>endswith(s, p)</code>, <code>repeat(s, n)</code>, <code>char_code(c)</code>, <code>from_char_code(n)</code>, <code>includes(s, part)</code>, <code>indexOf(s, part)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Массивы</strong> <code>length(a)</code>, <code>push(a, x)</code>, <code>pop(a)</code>, <code>shift(a)</code>, <code>unshift(a, x)</code>, <code>slice(a, start, end)</code>, <code>splice(a, start, count)</code>, <code>reverse(a)</code>, <code>sort(a)</code>, <code>includes(a, x)</code>, <code>indexOf(a, x)</code>, <code>map(a, fn)</code>, <code>filter(a, fn)</code>, <code>reduce(a, fn, init)</code>, <code>find(a, fn)</code>, <code>each(a, fn)</code>, <code>sum(a)</code>, <code>range(...)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Объекты</strong> <code>keys(o)</code>, <code>values(o)</code>, <code>entries(o)</code>, <code>has(o, key)</code>, <code>merge(o1, o2)</code>, <code>clone(v)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Математика</strong> <code>abs(x)</code>, <code>round(x[, digits])</code>, <code>floor(x)</code>, <code>ceil(x)</code>, <code>sqrt(x)</code>, <code>pow(b, e)</code>, <code>min(...)</code>, <code>max(...)</code>, <code>random()</code>, <code>random(min, max)</code>, <code>random_int(min, max)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Регулярные выражения</strong> <code>regex_match(pattern, s)</code>, <code>regex_findall(pattern, s)</code>, <code>regex_replace(pattern, s, repl)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Файлы и папки</strong> <code>read_file(path)</code>, <code>write_file(path, text)</code>, <code>append_file(path, text)</code>, <code>file_exists(path)</code>, <code>delete_file(path)</code>, <code>list_dir(path)</code>, <code>create_dir(path)</code>, <code>copy_file(src, dst)</code>, <code>rename_file(src, dst)</code>, <code>file_info(path)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Открытие, архивы, любые файлы</strong> <code>open_file(path)</code> — открыть в системном приложении, <code>open_url(url)</code> — открыть ссылку, <code>zip(src, out)</code> — упаковать файл/папку/массив путей в zip, <code>unzip(archive, dest)</code> — распаковать (zip/tar/gztar…), <code>zip_list(archive)</code> — список файлов в архиве. Для ЛЮБЫХ (в т.ч. бинарных) файлов: <code>read_base64(path)</code>, <code>write_base64(path, b64)</code>, <code>base64_encode(text)</code>, <code>base64_decode(b64)</code>.</p>
+<p class="page-module__iRtBbG__p"><strong>Время</strong> <code>get_time()</code>, <code>get_date()</code>, <code>sleep(ms)</code>, <code>format_time(ts[, fmt])</code></p>
+<p class="page-module__iRtBbG__p"><strong>JSON</strong> <code>parse_json(s)</code>, <code>stringify_json(v[, indent])</code></p>
+<p class="page-module__iRtBbG__p"><strong>HTTP</strong> (нужен <code>requests</code>) <code>http_get(url)</code>, <code>http_post(url, data)</code>, <code>http_put(url, data)</code>, <code>http_delete(url)</code> — возвращают <code>{status, body, headers}</code></p>
+<p class="page-module__iRtBbG__p"><strong>Система</strong> <code>system(cmd)</code> → <code>{stdout, stderr, returncode}</code>, <code>env(name[, default])</code>, <code>argv()</code>, <code>exit(code)</code></p>
+<p class="page-module__iRtBbG__p"><strong>Python</strong> <code>pyeval(code)</code>, <code>pyexec(code)</code>, <code>py(code)</code></p>
+<p class="page-module__iRtBbG__p"><strong>GUI</strong> — см. раздел <a href="#gui-оконные-программы">выше</a>.</p>
+<hr class="page-module__iRtBbG__hr">
+</div><div class="page-module__iRtBbG__section" id="примеры">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">7</span><h2 class="page-module__iRtBbG__sectionPlain">Примеры</h2></div>
+<p class="page-module__iRtBbG__p">В папке <code>examples/</code>:</p>
+<ul><li><code>hello.uni</code> — самое первое.</li><li><code>selftest.uni</code> — набор проверок самого интерпретатора: <code>uniland run examples/selftest.uni</code>.</li><li><code>greet_cli.uni</code> — спрашивает имя в консоли и отвечает.</li><li><code>gui_demo.uni</code> — маленькое окно с приветствием.</li><li><code>media_demo.uni</code> — картинки, кнопка-картинка, GIF, выбор файла, zip.</li><li><code>ticker.uni</code> — долгоживущий скрипт-«служба», тикает раз в секунду (стоп — <code>Ctrl+C</code>).</li><li><code>wordcount.uni</code> — счётчик слов в файле: <code>uniland run examples/wordcount.uni README.md</code>.</li></ul>
+<p class="page-module__iRtBbG__p">Аргументы командной строки доступны через <code>argv()</code>:</p>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">uniland</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="let args = argv()&#10;if (length(args) == 0) {&#10;    print(&quot;Передай имя файла&quot;)&#10;    exit(1)&#10;}&#10;print(&quot;Первый аргумент:&quot;, args[0])"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">let</span> args = argv()
+<span class="page-module__iRtBbG__tokKey">if</span> (length(args) == <span class="page-module__iRtBbG__tokNum">0</span>) {
+    print(<span class="page-module__iRtBbG__tokStr">"Передай имя файла"</span>)
+    exit(<span class="page-module__iRtBbG__tokNum">1</span>)
+}
+print(<span class="page-module__iRtBbG__tokStr">"Первый аргумент:"</span>, args[<span class="page-module__iRtBbG__tokNum">0</span>])</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">bash</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="uniland run script.uni файл.txt"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokKey">uniland</span> run script.uni файл.txt</code></pre></div>
+<hr class="page-module__iRtBbG__hr">
+</div><div class="page-module__iRtBbG__section" id="лицензия">
+<div class="page-module__iRtBbG__sectionHead"><span class="page-module__iRtBbG__sectionNumber">8</span><h2 class="page-module__iRtBbG__sectionPlain">Лицензия</h2></div>
+<p class="page-module__iRtBbG__p">MIT — делай с кодом что хочешь.</p></div>
+</div>
+<div class="page-module__iRtBbG__toc" id="docsToc"><div class="page-module__iRtBbG__tocLabel">Содержание</div><nav class="page-module__iRtBbG__tocList"><a class="page-module__iRtBbG__tocLink" href="#установка"><span class="page-module__iRtBbG__tocLinkNumber">1</span><span class="page-module__iRtBbG__tocLinkText">Установка</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#без-pip"><span class="page-module__iRtBbG__tocLinkNumber">1.1</span><span class="page-module__iRtBbG__tocLinkText">Без pip</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#команды"><span class="page-module__iRtBbG__tocLinkNumber">1.2</span><span class="page-module__iRtBbG__tocLinkText">Команды</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#зависимости"><span class="page-module__iRtBbG__tocLinkNumber">1.3</span><span class="page-module__iRtBbG__tocLinkText">Зависимости</span></a><a class="page-module__iRtBbG__tocLink" href="#первая-программа"><span class="page-module__iRtBbG__tocLinkNumber">2</span><span class="page-module__iRtBbG__tocLinkText">Первая программа</span></a><a class="page-module__iRtBbG__tocLink" href="#курс-основы-языка"><span class="page-module__iRtBbG__tocLinkNumber">3</span><span class="page-module__iRtBbG__tocLinkText">Курс: основы языка</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#переменные"><span class="page-module__iRtBbG__tocLinkNumber">3.1</span><span class="page-module__iRtBbG__tocLinkText">Переменные</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#типы-данных"><span class="page-module__iRtBbG__tocLinkNumber">3.2</span><span class="page-module__iRtBbG__tocLinkText">Типы данных</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#строки-и-шаблоны"><span class="page-module__iRtBbG__tocLinkNumber">3.3</span><span class="page-module__iRtBbG__tocLinkText">Строки и шаблоны</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#операторы"><span class="page-module__iRtBbG__tocLinkNumber">3.4</span><span class="page-module__iRtBbG__tocLinkText">Операторы</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#условия"><span class="page-module__iRtBbG__tocLinkNumber">3.5</span><span class="page-module__iRtBbG__tocLinkText">Условия</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#циклы"><span class="page-module__iRtBbG__tocLinkNumber">3.6</span><span class="page-module__iRtBbG__tocLinkText">Циклы</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#функции-и-лямбды"><span class="page-module__iRtBbG__tocLinkNumber">3.7</span><span class="page-module__iRtBbG__tocLinkText">Функции и лямбды</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#массивы"><span class="page-module__iRtBbG__tocLinkNumber">3.8</span><span class="page-module__iRtBbG__tocLinkText">Массивы</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#объекты"><span class="page-module__iRtBbG__tocLinkNumber">3.9</span><span class="page-module__iRtBbG__tocLinkText">Объекты</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#обработка-ошибок"><span class="page-module__iRtBbG__tocLinkNumber">3.10</span><span class="page-module__iRtBbG__tocLinkText">Обработка ошибок</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#ввод-и-долгоживущие-скрипты"><span class="page-module__iRtBbG__tocLinkNumber">3.11</span><span class="page-module__iRtBbG__tocLinkText">Ввод и долгоживущие скрипты</span></a><a class="page-module__iRtBbG__tocLink" href="#gui-оконные-программы"><span class="page-module__iRtBbG__tocLinkNumber">4</span><span class="page-module__iRtBbG__tocLinkText">GUI: оконные программы</span></a><a class="page-module__iRtBbG__tocLink page-module__iRtBbG__tocLinkSub" href="#картинки-gif-и-видео"><span class="page-module__iRtBbG__tocLinkNumber">4.1</span><span class="page-module__iRtBbG__tocLinkText">Картинки, GIF и видео</span></a><a class="page-module__iRtBbG__tocLink" href="#python-внутри-uniland"><span class="page-module__iRtBbG__tocLinkNumber">5</span><span class="page-module__iRtBbG__tocLinkText">Python внутри UniLand</span></a><a class="page-module__iRtBbG__tocLink" href="#справочник-встроенных-функций"><span class="page-module__iRtBbG__tocLinkNumber">6</span><span class="page-module__iRtBbG__tocLinkText">Справочник встроенных функций</span></a><a class="page-module__iRtBbG__tocLink" href="#примеры"><span class="page-module__iRtBbG__tocLinkNumber">7</span><span class="page-module__iRtBbG__tocLinkText">Примеры</span></a><a class="page-module__iRtBbG__tocLink" href="#лицензия"><span class="page-module__iRtBbG__tocLinkNumber">8</span><span class="page-module__iRtBbG__tocLinkText">Лицензия</span></a></nav></div>
+</main>
+<footer class="page-module__iRtBbG__footer">
+<p id="animated-text"><span data-i18n="endOfPage">End of page</span><span aria-hidden="true" style="display:inline-flex"><span class="animated-dot" style="animation-delay:0s">.</span><span class="animated-dot" style="animation-delay:0.2s">.</span><span class="animated-dot" style="animation-delay:0.4s">.</span></span></p>
+</footer>
+</div>
+<script src="data.js?v=1789398069"></script>
+<script src="app.js?v=1789398069"></script>
+<script src="assets/fx.js?v=1789398069"></script>
+</body>
+</html>

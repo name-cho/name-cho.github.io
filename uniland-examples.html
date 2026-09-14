@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>uniland / examples</title>
+<meta name="description" content="UniLand example scripts."/>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="assets/jetbrains-mono.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/fontawesome-subset.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/style.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/docs.css?v=1789398069"/>
+<link rel="stylesheet" href="assets/fx.css?v=1789398069"/>
+</head>
+<body>
+<div class="SideNav-module__W2m5EW__overlay" id="sideOverlay" aria-hidden="true"></div>
+<aside class="SideNav-module__W2m5EW__sideNav" id="sideNav">
+<nav class="SideNav-module__W2m5EW__navList" id="sideNavList"></nav>
+</aside>
+<div class="TopBar-module__hfKmSa__topBar">
+<div class="TopBar-module__hfKmSa__leftSlot">
+<div class="TopBar-module__hfKmSa__settingsBtnWrap">
+<button class="TopBar-module__hfKmSa__settingsBtn" id="navBtn" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+<span class="TopBar-module__hfKmSa__tooltip TopBar-module__hfKmSa__tooltipRight" data-i18n="navigation">Navigation</span>
+</div>
+</div>
+<nav class="TopBar-module__hfKmSa__breadcrumb" aria-label="breadcrumb">
+<span class="TopBar-module__hfKmSa__breadcrumbItem TopBar-module__hfKmSa__breadcrumbItemHidden"><a class="TopBar-module__hfKmSa__breadcrumbPrev" href="index.html" data-i18n="navHomeLabel">Home</a></span><span class="TopBar-module__hfKmSa__breadcrumbItem"><span class="TopBar-module__hfKmSa__breadcrumbSep">/</span><span class="TopBar-module__hfKmSa__breadcrumbCurrent" data-i18n="unilandExamples">Examples</span></span>
+</nav>
+<div class="TopBar-module__hfKmSa__rightControls">
+<div class="TopBar-module__hfKmSa__settingsBtnWrap">
+<button class="TopBar-module__hfKmSa__settingsBtn" id="settingsBtn" aria-label="Settings"><i class="fas fa-cog"></i></button>
+<span class="TopBar-module__hfKmSa__tooltip" id="settingsTooltip" data-i18n="preferences">Preferences</span>
+</div>
+<div class="TopBar-module__hfKmSa__popup" id="settingsPopup">
+<div class="TopBar-module__hfKmSa__popupSection">
+<div class="TopBar-module__hfKmSa__popupTitle" data-i18n="theme">Theme</div>
+<div class="TopBar-module__hfKmSa__optionRow">
+<button class="TopBar-module__hfKmSa__optionBtn js-theme-btn" data-theme="auto">Auto</button>
+<button class="TopBar-module__hfKmSa__optionBtn js-theme-btn" data-theme="light" aria-label="Light"><i class="fas fa-sun"></i></button>
+<button class="TopBar-module__hfKmSa__optionBtn js-theme-btn" data-theme="dark" aria-label="Dark"><i class="fas fa-moon"></i></button>
+</div>
+</div>
+<div class="TopBar-module__hfKmSa__popupSection">
+<div class="TopBar-module__hfKmSa__popupTitle" data-i18n="language">Language</div>
+<div class="TopBar-module__hfKmSa__optionRow">
+<button class="TopBar-module__hfKmSa__optionBtn js-lang-btn" data-lang="en">EN</button>
+<button class="TopBar-module__hfKmSa__optionBtn js-lang-btn" data-lang="ru">RU</button>
+</div>
+</div>
+<div class="TopBar-module__hfKmSa__popupSection">
+<div class="TopBar-module__hfKmSa__popupTitle" data-i18n="effects">Effects</div>
+<div class="TopBar-module__hfKmSa__optionRow">
+<div class="TopBar-module__hfKmSa__settingsBtnWrap">
+<button class="TopBar-module__hfKmSa__optionBtn" id="particlesBtn" type="button" aria-label="Click particles"><i class="fas fa-wand-magic-sparkles"></i></button>
+<span class="TopBar-module__hfKmSa__tooltip" data-i18n="particles">Click particles</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-module__E0kJGG__container" data-page="examples"><div class="page-module__iRtBbG__container" data-page="examples">
+<main class="page-module__iRtBbG__main">
+<div class="page-module__iRtBbG__body">
+<h1 class="jelly-drop">Примеры</h1>
+<p class="page-module__iRtBbG__intro">Файлы из папки <code>examples/</code> репозитория UniLand — от «привет, мир»
+до оконных программ и видео. Запуск: <code>uniland run file.uni</code>.</p>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="hellouni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">hello.uni</span><span class="page-module__iRtBbG__exampleNote">Первая программа — Одна строка — точка входа в язык.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// Самая первая программа на UniLand.&#10;// Запуск:  uniland run examples/hello.uni&#10;&#10;let name = &quot;мир&quot;&#10;print(`Привет, {name}!`)&#10;&#10;// Немного арифметики&#10;for (let i = 1; i &lt;= 5; i++) {&#10;    print(`{i} в квадрате = {i * i}`)&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// Самая первая программа на UniLand.</span>
+<span class="page-module__iRtBbG__tokComment">// Запуск:  uniland run examples/hello.uni</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> name = <span class="page-module__iRtBbG__tokStr">"мир"</span>
+print(<span class="page-module__iRtBbG__tokStr">`Привет, {name}!`</span>)
+
+<span class="page-module__iRtBbG__tokComment">// Немного арифметики</span>
+<span class="page-module__iRtBbG__tokKey">for</span> (<span class="page-module__iRtBbG__tokKey">let</span> i = <span class="page-module__iRtBbG__tokNum">1</span>; i &lt;= <span class="page-module__iRtBbG__tokNum">5</span>; i++) {
+    print(<span class="page-module__iRtBbG__tokStr">`{i} в квадрате = {i * i}`</span>)
+}</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="greetcliuni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">greet_cli.uni</span><span class="page-module__iRtBbG__exampleNote">CLI с аргументами — Чтение аргументов командной строки и шаблонные строки.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// Консольная (без окна) версия приветствия: спрашивает имя и отвечает.&#10;// Запуск:  uniland run examples/greet_cli.uni&#10;&#10;let name = input(&quot;Введи своё имя: &quot;)&#10;&#10;if (length(trim(name)) == 0) {&#10;    print(&quot;Имя пустое — ну и ладно, привет, незнакомец!&quot;)&#10;} else {&#10;    print(`Привет, {trim(name)}! Рад знакомству.`)&#10;}&#10;&#10;// можно спрашивать дальше — например, число&#10;let age = input(&quot;Сколько тебе лет? &quot;)&#10;print(`Через год тебе будет {to_number(age) + 1}.`)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// Консольная (без окна) версия приветствия: спрашивает имя и отвечает.</span>
+<span class="page-module__iRtBbG__tokComment">// Запуск:  uniland run examples/greet_cli.uni</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> name = input(<span class="page-module__iRtBbG__tokStr">"Введи своё имя: "</span>)
+
+<span class="page-module__iRtBbG__tokKey">if</span> (length(trim(name)) == <span class="page-module__iRtBbG__tokNum">0</span>) {
+    print(<span class="page-module__iRtBbG__tokStr">"Имя пустое — ну и ладно, привет, незнакомец!"</span>)
+} <span class="page-module__iRtBbG__tokKey">else</span> {
+    print(<span class="page-module__iRtBbG__tokStr">`Привет, {trim(name)}! Рад знакомству.`</span>)
+}
+
+<span class="page-module__iRtBbG__tokComment">// можно спрашивать дальше — например, число</span>
+<span class="page-module__iRtBbG__tokKey">let</span> age = input(<span class="page-module__iRtBbG__tokStr">"Сколько тебе лет? "</span>)
+print(<span class="page-module__iRtBbG__tokStr">`Через год тебе будет {to_number(age) + 1}.`</span>)</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="wordcountuni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">wordcount.uni</span><span class="page-module__iRtBbG__exampleNote">Подсчёт слов — Файлы, строки, массивы и функции в одном маленьком скрипте.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// Считает слова, строки и самые частые слова в текстовом файле.&#10;// Запуск:  uniland run examples/wordcount.uni README.md&#10;&#10;let files = argv()&#10;if (length(files) == 0) {&#10;    print(&quot;Использование: uniland run examples/wordcount.uni &lt;файл&gt;&quot;)&#10;    exit(1)&#10;}&#10;&#10;let path = files[0]&#10;if (!file_exists(path)) {&#10;    print(`Файл не найден: {path}`)&#10;    exit(1)&#10;}&#10;&#10;let text = read_file(path)&#10;let lines = split(text, &quot;\n&quot;)&#10;let words = split(lowercase(text), &quot; &quot;)&#10;&#10;// частота слов через объект&#10;let freq = {}&#10;for (w in words) {&#10;    let key = trim(w)&#10;    if (length(key) &gt; 0) {&#10;        if (has(freq, key)) { freq[key] += 1 } else { freq[key] = 1 }&#10;    }&#10;}&#10;&#10;print(`Строк:  {length(lines)}`)&#10;print(`Слов:   {length(words)}`)&#10;print(`Разных: {length(keys(freq))}`)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// Считает слова, строки и самые частые слова в текстовом файле.</span>
+<span class="page-module__iRtBbG__tokComment">// Запуск:  uniland run examples/wordcount.uni README.md</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> files = argv()
+<span class="page-module__iRtBbG__tokKey">if</span> (length(files) == <span class="page-module__iRtBbG__tokNum">0</span>) {
+    print(<span class="page-module__iRtBbG__tokStr">"Использование: uniland run examples/wordcount.uni &lt;файл&gt;"</span>)
+    exit(<span class="page-module__iRtBbG__tokNum">1</span>)
+}
+
+<span class="page-module__iRtBbG__tokKey">let</span> path = files[<span class="page-module__iRtBbG__tokNum">0</span>]
+<span class="page-module__iRtBbG__tokKey">if</span> (!file_exists(path)) {
+    print(<span class="page-module__iRtBbG__tokStr">`Файл не найден: {path}`</span>)
+    exit(<span class="page-module__iRtBbG__tokNum">1</span>)
+}
+
+<span class="page-module__iRtBbG__tokKey">let</span> text = read_file(path)
+<span class="page-module__iRtBbG__tokKey">let</span> lines = split(text, <span class="page-module__iRtBbG__tokStr">"\n"</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> words = split(lowercase(text), <span class="page-module__iRtBbG__tokStr">" "</span>)
+
+<span class="page-module__iRtBbG__tokComment">// частота слов через объект</span>
+<span class="page-module__iRtBbG__tokKey">let</span> freq = {}
+<span class="page-module__iRtBbG__tokKey">for</span> (w <span class="page-module__iRtBbG__tokKey">in</span> words) {
+    <span class="page-module__iRtBbG__tokKey">let</span> key = trim(w)
+    <span class="page-module__iRtBbG__tokKey">if</span> (length(key) &gt; <span class="page-module__iRtBbG__tokNum">0</span>) {
+        <span class="page-module__iRtBbG__tokKey">if</span> (has(freq, key)) { freq[key] += <span class="page-module__iRtBbG__tokNum">1</span> } <span class="page-module__iRtBbG__tokKey">else</span> { freq[key] = <span class="page-module__iRtBbG__tokNum">1</span> }
+    }
+}
+
+print(<span class="page-module__iRtBbG__tokStr">`Строк:  {length(lines)}`</span>)
+print(<span class="page-module__iRtBbG__tokStr">`Слов:   {length(words)}`</span>)
+print(<span class="page-module__iRtBbG__tokStr">`Разных: {length(keys(freq))}`</span>)</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="tickeruni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">ticker.uni</span><span class="page-module__iRtBbG__exampleNote">Тикер — Долгоживущий скрипт: цикл, пауза, обновление вывода.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// Долгоживущий скрипт: тикает раз в секунду и не завершается,&#10;// пока ты не нажмёшь Ctrl+C. Так делают простые службы и боты.&#10;// Запуск:  uniland run examples/ticker.uni&#10;&#10;let tick = 0&#10;log_info(&quot;Сервис запущен. Останови меня через Ctrl+C.&quot;)&#10;&#10;while (true) {&#10;    tick += 1&#10;    log_info(`тик #{tick} — время: {format_time(get_time(), &quot;%H:%M:%S&quot;)}`)&#10;    sleep(1000)   // пауза в миллисекундах&#10;}"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// Долгоживущий скрипт: тикает раз в секунду и не завершается,</span>
+<span class="page-module__iRtBbG__tokComment">// пока ты не нажмёшь Ctrl+C. Так делают простые службы и боты.</span>
+<span class="page-module__iRtBbG__tokComment">// Запуск:  uniland run examples/ticker.uni</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> tick = <span class="page-module__iRtBbG__tokNum">0</span>
+log_info(<span class="page-module__iRtBbG__tokStr">"Сервис запущен. Останови меня через Ctrl+C."</span>)
+
+<span class="page-module__iRtBbG__tokKey">while</span> (<span class="page-module__iRtBbG__tokKey">true</span>) {
+    tick += <span class="page-module__iRtBbG__tokNum">1</span>
+    log_info(<span class="page-module__iRtBbG__tokStr">`тик #{tick} — время: {format_time(get_time(), "%H:%M:%S")}`</span>)
+    sleep(<span class="page-module__iRtBbG__tokNum">1000</span>)   // пауза в миллисекундах
+}</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="guidemouni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">gui_demo.uni</span><span class="page-module__iRtBbG__exampleNote">Оконная программа — GUI на tkinter прямо из UniLand.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// Маленькое окно на UniLand: вводишь имя — получаешь приветствие.&#10;// Запуск:  uniland run examples/gui_demo.uni&#10;&#10;let win = gui_window(&quot;Привет, UniLand&quot;, 320, 160)&#10;gui_label(win, &quot;Как тебя зовут?&quot;)&#10;let field = gui_input(win, &quot;&quot;)&#10;let out = gui_label(win, &quot;&quot;)&#10;&#10;gui_button(win, &quot;Поздороваться&quot;, () =&gt; {&#10;    let name = gui_get(field)&#10;    if (length(name) == 0) {&#10;        gui_set(out, &quot;Введи имя :)&quot;)&#10;    } else {&#10;        gui_set(out, `Привет, {name}!`)&#10;    }&#10;})&#10;&#10;gui_button(win, &quot;Выход&quot;, () =&gt; { gui_close(win) })&#10;&#10;gui_run(win)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// Маленькое окно на UniLand: вводишь имя — получаешь приветствие.</span>
+<span class="page-module__iRtBbG__tokComment">// Запуск:  uniland run examples/gui_demo.uni</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> win = gui_window(<span class="page-module__iRtBbG__tokStr">"Привет, UniLand"</span>, <span class="page-module__iRtBbG__tokNum">320</span>, <span class="page-module__iRtBbG__tokNum">160</span>)
+gui_label(win, <span class="page-module__iRtBbG__tokStr">"Как тебя зовут?"</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> field = gui_input(win, <span class="page-module__iRtBbG__tokStr">""</span>)
+<span class="page-module__iRtBbG__tokKey">let</span> out = gui_label(win, <span class="page-module__iRtBbG__tokStr">""</span>)
+
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Поздороваться"</span>, () =&gt; {
+    <span class="page-module__iRtBbG__tokKey">let</span> name = gui_get(field)
+    <span class="page-module__iRtBbG__tokKey">if</span> (length(name) == <span class="page-module__iRtBbG__tokNum">0</span>) {
+        gui_set(out, <span class="page-module__iRtBbG__tokStr">"Введи имя :)"</span>)
+    } <span class="page-module__iRtBbG__tokKey">else</span> {
+        gui_set(out, <span class="page-module__iRtBbG__tokStr">`Привет, {name}!`</span>)
+    }
+})
+
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Выход"</span>, () =&gt; { gui_close(win) })
+
+gui_run(win)</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="mediademouni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">media_demo.uni</span><span class="page-module__iRtBbG__exampleNote">Картинки и видео — Загрузка изображений, GIF и видео в окне.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// Демонстрация медиа и файлов в UniLand 2.2&#10;// Запуск:  uniland run examples/media_demo.uni&#10;//&#10;// Положи рядом картинку pic.png (png/gif работают без Pillow).&#10;// GIF и видео — по желанию (anim.gif, clip.mp4).&#10;&#10;let win = gui_window(&quot;UniLand — медиа&quot;, 420, 560)&#10;gui_label(win, &quot;Картинка, кнопка-картинка, выбор файла и архивы:&quot;)&#10;&#10;// показать картинку (если её нет — будет понятная ошибка)&#10;try {&#10;    gui_image(win, &quot;pic.png&quot;, 120, 120)&#10;} catch (e) {&#10;    gui_label(win, &quot;нет pic.png — положи картинку рядом&quot;)&#10;}&#10;&#10;let out = gui_label(win, &quot;&quot;)&#10;&#10;// кнопка-картинка: клик считает нажатия&#10;let clicks = 0&#10;try {&#10;    gui_image_button(win, &quot;pic.png&quot;, () =&gt; {&#10;        clicks += 1&#10;        gui_set(out, `Кликов: {clicks}`)&#10;    }, 96, 96)&#10;} catch (e) { }&#10;&#10;// выбрать любой файл через системный диалог&#10;gui_button(win, &quot;Выбрать файл…&quot;, () =&gt; {&#10;    let f = pick_file(&quot;Выбери что-нибудь&quot;)&#10;    if (f == null) {&#10;        gui_set(out, &quot;Отменено&quot;)&#10;    } else {&#10;        gui_set(out, `Выбран: {f}`)&#10;    }&#10;})&#10;&#10;// открыть файл/ссылку в системном приложении&#10;gui_button(win, &quot;Открыть сайт языка&quot;, () =&gt; {&#10;    open_url(&quot;https://codeberg.org/moyunni/uniland&quot;)&#10;})&#10;&#10;// заархивировать и показать содержимое&#10;gui_button(win, &quot;Сделать zip из этой папки&quot;, () =&gt; {&#10;    zip(&quot;.&quot;, &quot;demo.zip&quot;)&#10;    gui_set(out, `В архиве: {join(zip_list(&quot;demo.zip&quot;), &quot;, &quot;)}`)&#10;})&#10;&#10;// анимированный GIF (если есть)&#10;try { gui_gif(win, &quot;anim.gif&quot;, 160, 120) } catch (e) { }&#10;&#10;gui_button(win, &quot;Выход&quot;, () =&gt; { gui_close(win) })&#10;gui_run(win)"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// Демонстрация медиа и файлов в UniLand 2.2</span>
+<span class="page-module__iRtBbG__tokComment">// Запуск:  uniland run examples/media_demo.uni</span>
+<span class="page-module__iRtBbG__tokComment">//</span>
+<span class="page-module__iRtBbG__tokComment">// Положи рядом картинку pic.png (png/gif работают без Pillow).</span>
+<span class="page-module__iRtBbG__tokComment">// GIF и видео — по желанию (anim.gif, clip.mp4).</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> win = gui_window(<span class="page-module__iRtBbG__tokStr">"UniLand — медиа"</span>, <span class="page-module__iRtBbG__tokNum">420</span>, <span class="page-module__iRtBbG__tokNum">560</span>)
+gui_label(win, <span class="page-module__iRtBbG__tokStr">"Картинка, кнопка-картинка, выбор файла и архивы:"</span>)
+
+<span class="page-module__iRtBbG__tokComment">// показать картинку (если её нет — будет понятная ошибка)</span>
+<span class="page-module__iRtBbG__tokKey">try</span> {
+    gui_image(win, <span class="page-module__iRtBbG__tokStr">"pic.png"</span>, <span class="page-module__iRtBbG__tokNum">120</span>, <span class="page-module__iRtBbG__tokNum">120</span>)
+} <span class="page-module__iRtBbG__tokKey">catch</span> (e) {
+    gui_label(win, <span class="page-module__iRtBbG__tokStr">"нет pic.png — положи картинку рядом"</span>)
+}
+
+<span class="page-module__iRtBbG__tokKey">let</span> out = gui_label(win, <span class="page-module__iRtBbG__tokStr">""</span>)
+
+<span class="page-module__iRtBbG__tokComment">// кнопка-картинка: клик считает нажатия</span>
+<span class="page-module__iRtBbG__tokKey">let</span> clicks = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">try</span> {
+    gui_image_button(win, <span class="page-module__iRtBbG__tokStr">"pic.png"</span>, () =&gt; {
+        clicks += <span class="page-module__iRtBbG__tokNum">1</span>
+        gui_set(out, <span class="page-module__iRtBbG__tokStr">`Кликов: {clicks}`</span>)
+    }, <span class="page-module__iRtBbG__tokNum">96</span>, <span class="page-module__iRtBbG__tokNum">96</span>)
+} <span class="page-module__iRtBbG__tokKey">catch</span> (e) { }
+
+<span class="page-module__iRtBbG__tokComment">// выбрать любой файл через системный диалог</span>
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Выбрать файл…"</span>, () =&gt; {
+    <span class="page-module__iRtBbG__tokKey">let</span> f = pick_file(<span class="page-module__iRtBbG__tokStr">"Выбери что-нибудь"</span>)
+    <span class="page-module__iRtBbG__tokKey">if</span> (f == <span class="page-module__iRtBbG__tokKey">null</span>) {
+        gui_set(out, <span class="page-module__iRtBbG__tokStr">"Отменено"</span>)
+    } <span class="page-module__iRtBbG__tokKey">else</span> {
+        gui_set(out, <span class="page-module__iRtBbG__tokStr">`Выбран: {f}`</span>)
+    }
+})
+
+<span class="page-module__iRtBbG__tokComment">// открыть файл/ссылку в системном приложении</span>
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Открыть сайт языка"</span>, () =&gt; {
+    open_url(<span class="page-module__iRtBbG__tokStr">"https://codeberg.org/moyunni/uniland"</span>)
+})
+
+<span class="page-module__iRtBbG__tokComment">// заархивировать и показать содержимое</span>
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Сделать zip из этой папки"</span>, () =&gt; {
+    zip(<span class="page-module__iRtBbG__tokStr">"."</span>, <span class="page-module__iRtBbG__tokStr">"demo.zip"</span>)
+    gui_set(out, <span class="page-module__iRtBbG__tokStr">`В архиве: {join(zip_list("demo.zip"), ", ")}`</span>)
+})
+
+<span class="page-module__iRtBbG__tokComment">// анимированный GIF (если есть)</span>
+<span class="page-module__iRtBbG__tokKey">try</span> { gui_gif(win, <span class="page-module__iRtBbG__tokStr">"anim.gif"</span>, <span class="page-module__iRtBbG__tokNum">160</span>, <span class="page-module__iRtBbG__tokNum">120</span>) } <span class="page-module__iRtBbG__tokKey">catch</span> (e) { }
+
+gui_button(win, <span class="page-module__iRtBbG__tokStr">"Выход"</span>, () =&gt; { gui_close(win) })
+gui_run(win)</code></pre></div>
+<div class="page-module__iRtBbG__codeBlock exampleBlock" id="selftestuni"><div class="page-module__iRtBbG__codeHeader"><span class="page-module__iRtBbG__codeLang">selftest.uni</span><span class="page-module__iRtBbG__exampleNote">Самопроверка языка — Набор проверок: синтаксис, встроенные функции, ошибки.</span><button class="page-module__iRtBbG__copyBtn" type="button" data-code="// ============================================================&#10;//  UniLand self-test — проверяет интерпретатор сам на себе.&#10;//  Запуск:  uniland run examples/selftest.uni&#10;// ============================================================&#10;&#10;let passed = 0&#10;let failed = 0&#10;&#10;func check(name, got, want) {&#10;    if (got == want) {&#10;        passed += 1&#10;    } else {&#10;        failed += 1&#10;        print(`  FAIL: {name}  (получили {got}, ждали {want})`)&#10;    }&#10;}&#10;&#10;// ---- арифметика и приоритеты ----&#10;check(&quot;math&quot;, 2 + 3 * 4, 14)&#10;check(&quot;power&quot;, 2 ^ 10, 1024)&#10;check(&quot;mod&quot;, 17 % 5, 2)&#10;check(&quot;unary&quot;, -(-5), 5)&#10;check(&quot;compare&quot;, 3 &lt; 5 &amp;&amp; 5 &lt;= 5, true)&#10;&#10;// ---- строки и шаблоны ----&#10;let who = &quot;мир&quot;&#10;check(&quot;template&quot;, `привет, {who}!`, &quot;привет, мир!&quot;)&#10;check(&quot;concat&quot;, &quot;a&quot; + 1 + true, &quot;a1true&quot;)&#10;check(&quot;upper&quot;, uppercase(&quot;abc&quot;), &quot;ABC&quot;)&#10;check(&quot;split&quot;, length(split(&quot;a,b,c&quot;, &quot;,&quot;)), 3)&#10;check(&quot;trim&quot;, trim(&quot;  hi  &quot;), &quot;hi&quot;)&#10;&#10;// ---- функции, рекурсия, замыкания ----&#10;func fact(n) {&#10;    if (n &lt;= 1) { return 1 }&#10;    return n * fact(n - 1)&#10;}&#10;check(&quot;recursion&quot;, fact(6), 720)&#10;&#10;func adder(step) { return x =&gt; x + step }&#10;let add10 = adder(10)&#10;check(&quot;closure&quot;, add10(5), 15)&#10;&#10;// ---- условия и циклы ----&#10;let total = 0&#10;for (let i = 1; i &lt;= 100; i++) { total += i }&#10;check(&quot;for-classic&quot;, total, 5050)&#10;&#10;let s = 0&#10;for (n in [3, 4, 5]) { s += n }&#10;check(&quot;for-in-array&quot;, s, 12)&#10;&#10;let collected = &quot;&quot;&#10;for (ch in &quot;abc&quot;) { collected += ch }&#10;check(&quot;for-in-string&quot;, collected, &quot;abc&quot;)&#10;&#10;let n = 0&#10;while (n &lt; 5) { n++ }&#10;check(&quot;while&quot;, n, 5)&#10;&#10;// ---- break / continue ----&#10;let acc = 0&#10;for (let i = 0; i &lt; 10; i++) {&#10;    if (i == 5) { break }&#10;    if (i % 2 == 0) { continue }&#10;    acc += i&#10;}&#10;check(&quot;break-continue&quot;, acc, 4)  // 1 + 3&#10;&#10;// ---- массивы ----&#10;let arr = [1, 2, 3]&#10;push(arr, 4)&#10;check(&quot;push&quot;, length(arr), 4)&#10;check(&quot;pop&quot;, pop(arr), 4)&#10;check(&quot;map&quot;, join(map([1, 2, 3], x =&gt; x * 2), &quot;,&quot;), &quot;2,4,6&quot;)&#10;check(&quot;filter&quot;, length(filter([1, 2, 3, 4], x =&gt; x % 2 == 0)), 2)&#10;check(&quot;reduce&quot;, reduce([1, 2, 3, 4], (a, b) =&gt; a + b, 0), 10)&#10;check(&quot;sort&quot;, join(sort([3, 1, 2]), &quot;&quot;), &quot;123&quot;)&#10;check(&quot;includes&quot;, includes([1, 2, 3], 2), true)&#10;check(&quot;range&quot;, length(range(0, 10)), 10)&#10;&#10;// ---- объекты ----&#10;let user = {name: &quot;Аня&quot;, age: 20}&#10;user.age += 1&#10;user[&quot;city&quot;] = &quot;Питер&quot;&#10;check(&quot;obj-dot&quot;, user.name, &quot;Аня&quot;)&#10;check(&quot;obj-update&quot;, user.age, 21)&#10;check(&quot;obj-index&quot;, user[&quot;city&quot;], &quot;Питер&quot;)&#10;check(&quot;keys&quot;, length(keys(user)), 3)&#10;check(&quot;has&quot;, has(user, &quot;name&quot;), true)&#10;&#10;// ---- вложенные структуры ----&#10;let grid = [[1, 2], [3, 4]]&#10;grid[0][1] = 99&#10;check(&quot;nested-index&quot;, grid[0][1], 99)&#10;&#10;// ---- ошибки ----&#10;let caught = &quot;no&quot;&#10;try {&#10;    throw &quot;oops&quot;&#10;} catch (e) {&#10;    caught = e&#10;}&#10;check(&quot;try-catch&quot;, caught, &quot;oops&quot;)&#10;&#10;// ---- встроенный Python ----&#10;python {&#10;    import math&#10;    uni.sqrt2 = math.sqrt(2)&#10;}&#10;check(&quot;python-block&quot;, round(sqrt2, 5), 1.41421)&#10;check(&quot;pyeval&quot;, pyeval(&quot;3 * 14&quot;), 42)&#10;&#10;// ---- JSON ----&#10;let data = parse_json(&quot;{\&quot;x\&quot;: 1, \&quot;y\&quot;: [2, 3]}&quot;)&#10;check(&quot;json-parse&quot;, data[&quot;y&quot;][1], 3)&#10;&#10;// ============================================================&#10;print(&quot;&quot;)&#10;print(`Готово: {passed} прошло, {failed} упало.`)&#10;if (failed &gt; 0) { exit(1) }"><i class="fas fa-copy"></i><span class="copyLabel">Copy</span></button></div><pre><code><span class="page-module__iRtBbG__tokComment">// ============================================================</span>
+<span class="page-module__iRtBbG__tokComment">//  UniLand self-test — проверяет интерпретатор сам на себе.</span>
+<span class="page-module__iRtBbG__tokComment">//  Запуск:  uniland run examples/selftest.uni</span>
+<span class="page-module__iRtBbG__tokComment">// ============================================================</span>
+
+<span class="page-module__iRtBbG__tokKey">let</span> passed = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">let</span> failed = <span class="page-module__iRtBbG__tokNum">0</span>
+
+func check(name, got, want) {
+    <span class="page-module__iRtBbG__tokKey">if</span> (got == want) {
+        passed += <span class="page-module__iRtBbG__tokNum">1</span>
+    } <span class="page-module__iRtBbG__tokKey">else</span> {
+        failed += <span class="page-module__iRtBbG__tokNum">1</span>
+        print(<span class="page-module__iRtBbG__tokStr">`  FAIL: {name}  (получили {got}, ждали {want})`</span>)
+    }
+}
+
+<span class="page-module__iRtBbG__tokComment">// ---- арифметика и приоритеты ----</span>
+check(<span class="page-module__iRtBbG__tokStr">"math"</span>, <span class="page-module__iRtBbG__tokNum">2</span> + <span class="page-module__iRtBbG__tokNum">3</span> * <span class="page-module__iRtBbG__tokNum">4</span>, <span class="page-module__iRtBbG__tokNum">14</span>)
+check(<span class="page-module__iRtBbG__tokStr">"power"</span>, <span class="page-module__iRtBbG__tokNum">2</span> ^ <span class="page-module__iRtBbG__tokNum">10</span>, <span class="page-module__iRtBbG__tokNum">1024</span>)
+check(<span class="page-module__iRtBbG__tokStr">"mod"</span>, <span class="page-module__iRtBbG__tokNum">17</span> % <span class="page-module__iRtBbG__tokNum">5</span>, <span class="page-module__iRtBbG__tokNum">2</span>)
+check(<span class="page-module__iRtBbG__tokStr">"unary"</span>, -(-<span class="page-module__iRtBbG__tokNum">5</span>), <span class="page-module__iRtBbG__tokNum">5</span>)
+check(<span class="page-module__iRtBbG__tokStr">"compare"</span>, <span class="page-module__iRtBbG__tokNum">3</span> &lt; <span class="page-module__iRtBbG__tokNum">5</span> &amp;&amp; <span class="page-module__iRtBbG__tokNum">5</span> &lt;= <span class="page-module__iRtBbG__tokNum">5</span>, <span class="page-module__iRtBbG__tokKey">true</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- строки и шаблоны ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> who = <span class="page-module__iRtBbG__tokStr">"мир"</span>
+check(<span class="page-module__iRtBbG__tokStr">"template"</span>, <span class="page-module__iRtBbG__tokStr">`привет, {who}!`</span>, <span class="page-module__iRtBbG__tokStr">"привет, мир!"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"concat"</span>, <span class="page-module__iRtBbG__tokStr">"a"</span> + <span class="page-module__iRtBbG__tokNum">1</span> + <span class="page-module__iRtBbG__tokKey">true</span>, <span class="page-module__iRtBbG__tokStr">"a1true"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"upper"</span>, uppercase(<span class="page-module__iRtBbG__tokStr">"abc"</span>), <span class="page-module__iRtBbG__tokStr">"ABC"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"split"</span>, length(split(<span class="page-module__iRtBbG__tokStr">"a,b,c"</span>, <span class="page-module__iRtBbG__tokStr">","</span>)), <span class="page-module__iRtBbG__tokNum">3</span>)
+check(<span class="page-module__iRtBbG__tokStr">"trim"</span>, trim(<span class="page-module__iRtBbG__tokStr">"  hi  "</span>), <span class="page-module__iRtBbG__tokStr">"hi"</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- функции, рекурсия, замыкания ----</span>
+func fact(n) {
+    <span class="page-module__iRtBbG__tokKey">if</span> (n &lt;= <span class="page-module__iRtBbG__tokNum">1</span>) { <span class="page-module__iRtBbG__tokKey">return</span> <span class="page-module__iRtBbG__tokNum">1</span> }
+    <span class="page-module__iRtBbG__tokKey">return</span> n * fact(n - <span class="page-module__iRtBbG__tokNum">1</span>)
+}
+check(<span class="page-module__iRtBbG__tokStr">"recursion"</span>, fact(<span class="page-module__iRtBbG__tokNum">6</span>), <span class="page-module__iRtBbG__tokNum">720</span>)
+
+func adder(step) { <span class="page-module__iRtBbG__tokKey">return</span> x =&gt; x + step }
+<span class="page-module__iRtBbG__tokKey">let</span> add10 = adder(<span class="page-module__iRtBbG__tokNum">10</span>)
+check(<span class="page-module__iRtBbG__tokStr">"closure"</span>, add10(<span class="page-module__iRtBbG__tokNum">5</span>), <span class="page-module__iRtBbG__tokNum">15</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- условия и циклы ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> total = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">for</span> (<span class="page-module__iRtBbG__tokKey">let</span> i = <span class="page-module__iRtBbG__tokNum">1</span>; i &lt;= <span class="page-module__iRtBbG__tokNum">100</span>; i++) { total += i }
+check(<span class="page-module__iRtBbG__tokStr">"for-classic"</span>, total, <span class="page-module__iRtBbG__tokNum">5050</span>)
+
+<span class="page-module__iRtBbG__tokKey">let</span> s = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">for</span> (n <span class="page-module__iRtBbG__tokKey">in</span> [<span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">4</span>, <span class="page-module__iRtBbG__tokNum">5</span>]) { s += n }
+check(<span class="page-module__iRtBbG__tokStr">"for-in-array"</span>, s, <span class="page-module__iRtBbG__tokNum">12</span>)
+
+<span class="page-module__iRtBbG__tokKey">let</span> collected = <span class="page-module__iRtBbG__tokStr">""</span>
+<span class="page-module__iRtBbG__tokKey">for</span> (ch <span class="page-module__iRtBbG__tokKey">in</span> <span class="page-module__iRtBbG__tokStr">"abc"</span>) { collected += ch }
+check(<span class="page-module__iRtBbG__tokStr">"for-in-string"</span>, collected, <span class="page-module__iRtBbG__tokStr">"abc"</span>)
+
+<span class="page-module__iRtBbG__tokKey">let</span> n = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">while</span> (n &lt; <span class="page-module__iRtBbG__tokNum">5</span>) { n++ }
+check(<span class="page-module__iRtBbG__tokStr">"while"</span>, n, <span class="page-module__iRtBbG__tokNum">5</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- break / continue ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> acc = <span class="page-module__iRtBbG__tokNum">0</span>
+<span class="page-module__iRtBbG__tokKey">for</span> (<span class="page-module__iRtBbG__tokKey">let</span> i = <span class="page-module__iRtBbG__tokNum">0</span>; i &lt; <span class="page-module__iRtBbG__tokNum">10</span>; i++) {
+    <span class="page-module__iRtBbG__tokKey">if</span> (i == <span class="page-module__iRtBbG__tokNum">5</span>) { <span class="page-module__iRtBbG__tokKey">break</span> }
+    <span class="page-module__iRtBbG__tokKey">if</span> (i % <span class="page-module__iRtBbG__tokNum">2</span> == <span class="page-module__iRtBbG__tokNum">0</span>) { <span class="page-module__iRtBbG__tokKey">continue</span> }
+    acc += i
+}
+check(<span class="page-module__iRtBbG__tokStr">"break-continue"</span>, acc, <span class="page-module__iRtBbG__tokNum">4</span>)  // <span class="page-module__iRtBbG__tokNum">1</span> + <span class="page-module__iRtBbG__tokNum">3</span>
+
+<span class="page-module__iRtBbG__tokComment">// ---- массивы ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> arr = [<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>]
+push(arr, <span class="page-module__iRtBbG__tokNum">4</span>)
+check(<span class="page-module__iRtBbG__tokStr">"push"</span>, length(arr), <span class="page-module__iRtBbG__tokNum">4</span>)
+check(<span class="page-module__iRtBbG__tokStr">"pop"</span>, pop(arr), <span class="page-module__iRtBbG__tokNum">4</span>)
+check(<span class="page-module__iRtBbG__tokStr">"map"</span>, join(map([<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>], x =&gt; x * <span class="page-module__iRtBbG__tokNum">2</span>), <span class="page-module__iRtBbG__tokStr">","</span>), <span class="page-module__iRtBbG__tokStr">"2,4,6"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"filter"</span>, length(filter([<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">4</span>], x =&gt; x % <span class="page-module__iRtBbG__tokNum">2</span> == <span class="page-module__iRtBbG__tokNum">0</span>)), <span class="page-module__iRtBbG__tokNum">2</span>)
+check(<span class="page-module__iRtBbG__tokStr">"reduce"</span>, reduce([<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">4</span>], (a, b) =&gt; a + b, <span class="page-module__iRtBbG__tokNum">0</span>), <span class="page-module__iRtBbG__tokNum">10</span>)
+check(<span class="page-module__iRtBbG__tokStr">"sort"</span>, join(sort([<span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>]), <span class="page-module__iRtBbG__tokStr">""</span>), <span class="page-module__iRtBbG__tokStr">"123"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"includes"</span>, includes([<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>, <span class="page-module__iRtBbG__tokNum">3</span>], <span class="page-module__iRtBbG__tokNum">2</span>), <span class="page-module__iRtBbG__tokKey">true</span>)
+check(<span class="page-module__iRtBbG__tokStr">"range"</span>, length(range(<span class="page-module__iRtBbG__tokNum">0</span>, <span class="page-module__iRtBbG__tokNum">10</span>)), <span class="page-module__iRtBbG__tokNum">10</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- объекты ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> user = {name: <span class="page-module__iRtBbG__tokStr">"Аня"</span>, age: <span class="page-module__iRtBbG__tokNum">20</span>}
+user.age += <span class="page-module__iRtBbG__tokNum">1</span>
+user[<span class="page-module__iRtBbG__tokStr">"city"</span>] = <span class="page-module__iRtBbG__tokStr">"Питер"</span>
+check(<span class="page-module__iRtBbG__tokStr">"obj-dot"</span>, user.name, <span class="page-module__iRtBbG__tokStr">"Аня"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"obj-update"</span>, user.age, <span class="page-module__iRtBbG__tokNum">21</span>)
+check(<span class="page-module__iRtBbG__tokStr">"obj-index"</span>, user[<span class="page-module__iRtBbG__tokStr">"city"</span>], <span class="page-module__iRtBbG__tokStr">"Питер"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"keys"</span>, length(keys(user)), <span class="page-module__iRtBbG__tokNum">3</span>)
+check(<span class="page-module__iRtBbG__tokStr">"has"</span>, has(user, <span class="page-module__iRtBbG__tokStr">"name"</span>), <span class="page-module__iRtBbG__tokKey">true</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- вложенные структуры ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> grid = [[<span class="page-module__iRtBbG__tokNum">1</span>, <span class="page-module__iRtBbG__tokNum">2</span>], [<span class="page-module__iRtBbG__tokNum">3</span>, <span class="page-module__iRtBbG__tokNum">4</span>]]
+grid[<span class="page-module__iRtBbG__tokNum">0</span>][<span class="page-module__iRtBbG__tokNum">1</span>] = <span class="page-module__iRtBbG__tokNum">99</span>
+check(<span class="page-module__iRtBbG__tokStr">"nested-index"</span>, grid[<span class="page-module__iRtBbG__tokNum">0</span>][<span class="page-module__iRtBbG__tokNum">1</span>], <span class="page-module__iRtBbG__tokNum">99</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- ошибки ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> caught = <span class="page-module__iRtBbG__tokStr">"no"</span>
+<span class="page-module__iRtBbG__tokKey">try</span> {
+    <span class="page-module__iRtBbG__tokKey">throw</span> <span class="page-module__iRtBbG__tokStr">"oops"</span>
+} <span class="page-module__iRtBbG__tokKey">catch</span> (e) {
+    caught = e
+}
+check(<span class="page-module__iRtBbG__tokStr">"try-catch"</span>, caught, <span class="page-module__iRtBbG__tokStr">"oops"</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- встроенный Python ----</span>
+<span class="page-module__iRtBbG__tokKey">python</span> {
+    <span class="page-module__iRtBbG__tokKey">import</span> math
+    uni.sqrt2 = math.sqrt(<span class="page-module__iRtBbG__tokNum">2</span>)
+}
+check(<span class="page-module__iRtBbG__tokStr">"python-block"</span>, round(sqrt2, <span class="page-module__iRtBbG__tokNum">5</span>), <span class="page-module__iRtBbG__tokNum">1.41421</span>)
+check(<span class="page-module__iRtBbG__tokStr">"pyeval"</span>, pyeval(<span class="page-module__iRtBbG__tokStr">"3 * 14"</span>), <span class="page-module__iRtBbG__tokNum">42</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ---- JSON ----</span>
+<span class="page-module__iRtBbG__tokKey">let</span> data = parse_json(<span class="page-module__iRtBbG__tokStr">"{\"x\": 1, \"y\": [2, 3]}"</span>)
+check(<span class="page-module__iRtBbG__tokStr">"json-parse"</span>, data[<span class="page-module__iRtBbG__tokStr">"y"</span>][<span class="page-module__iRtBbG__tokNum">1</span>], <span class="page-module__iRtBbG__tokNum">3</span>)
+
+<span class="page-module__iRtBbG__tokComment">// ============================================================</span>
+print(<span class="page-module__iRtBbG__tokStr">""</span>)
+print(<span class="page-module__iRtBbG__tokStr">`Готово: {passed} прошло, {failed} упало.`</span>)
+<span class="page-module__iRtBbG__tokKey">if</span> (failed &gt; <span class="page-module__iRtBbG__tokNum">0</span>) { exit(<span class="page-module__iRtBbG__tokNum">1</span>) }</code></pre></div>
+</div>
+<div class="page-module__iRtBbG__toc" id="examplesToc"><div class="page-module__iRtBbG__tocLabel">Файлы</div><nav class="page-module__iRtBbG__tocList"><a class="page-module__iRtBbG__tocLink" href="#hellouni"><span class="page-module__iRtBbG__tocLinkNumber">1</span><span class="page-module__iRtBbG__tocLinkText">Первая программа</span></a><a class="page-module__iRtBbG__tocLink" href="#greetcliuni"><span class="page-module__iRtBbG__tocLinkNumber">2</span><span class="page-module__iRtBbG__tocLinkText">CLI с аргументами</span></a><a class="page-module__iRtBbG__tocLink" href="#wordcountuni"><span class="page-module__iRtBbG__tocLinkNumber">3</span><span class="page-module__iRtBbG__tocLinkText">Подсчёт слов</span></a><a class="page-module__iRtBbG__tocLink" href="#tickeruni"><span class="page-module__iRtBbG__tocLinkNumber">4</span><span class="page-module__iRtBbG__tocLinkText">Тикер</span></a><a class="page-module__iRtBbG__tocLink" href="#guidemouni"><span class="page-module__iRtBbG__tocLinkNumber">5</span><span class="page-module__iRtBbG__tocLinkText">Оконная программа</span></a><a class="page-module__iRtBbG__tocLink" href="#mediademouni"><span class="page-module__iRtBbG__tocLinkNumber">6</span><span class="page-module__iRtBbG__tocLinkText">Картинки и видео</span></a><a class="page-module__iRtBbG__tocLink" href="#selftestuni"><span class="page-module__iRtBbG__tocLinkNumber">7</span><span class="page-module__iRtBbG__tocLinkText">Самопроверка языка</span></a></nav></div>
+</main>
+<footer class="page-module__iRtBbG__footer">
+<p id="animated-text"><span data-i18n="endOfPage">End of page</span><span aria-hidden="true" style="display:inline-flex"><span class="animated-dot" style="animation-delay:0s">.</span><span class="animated-dot" style="animation-delay:0.2s">.</span><span class="animated-dot" style="animation-delay:0.4s">.</span></span></p>
+</footer>
+</div>
+<script src="data.js?v=1789398069"></script>
+<script src="app.js?v=1789398069"></script>
+<script src="assets/fx.js?v=1789398069"></script>
+</body>
+</html>

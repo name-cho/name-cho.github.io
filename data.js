@@ -48,8 +48,8 @@ window.SITE_DATA = {
       name: "chie",
       icon: "fa-pen-nib",
       lang: "Rust",
-      stars: 0, forks: 0, size: "65.00 KB", commits: 6,
-      updated: "2026-08-05T07:20:06ZZ",
+      stars: 0, forks: 0, size: "41.00 KB", commits: 9,
+      updated: "2026-08-03T11:12:00ZZ",
       url: "https://github.com/name-cho/chie",
         desc: {
         en: "Terminal text editor in the spirit of nano — same habits, but with real syntax highlighting, including a hand-written one for UniLand.",
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "760.00 KB", commits: 2,
-      updated: "2026-09-14T16:49:02ZZ",
+      stars: 0, forks: 0, size: "761.00 KB", commits: 3,
+      updated: "2026-09-14T19:52:19ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

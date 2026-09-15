@@ -126,8 +126,15 @@
   function syncNavOpen() {
     var sn = $("#sideNav");
     var ov = $("#sideOverlay");
+    var btn = $("#navBtn");
     if (sn) sn.classList.toggle("SideNav-module__W2m5EW__open", state.navOpen);
     if (ov) ov.classList.toggle("SideNav-module__W2m5EW__overlayVisible", state.navOpen);
+    if (btn) {
+      btn.classList.toggle("TopBar-module__hfKmSa__settingsBtnActive", state.navOpen);
+      var icon = btn.querySelector("i");
+      if (icon) icon.className = "fas " + (state.navOpen ? "fa-xmark" : "fa-bars");
+      btn.setAttribute("aria-label", state.navOpen ? "Close navigation" : "Open navigation");
+    }
   }
 
   

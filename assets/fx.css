@@ -12,105 +12,186 @@
 :root {
   --ease-jelly: cubic-bezier(.3, 1.36, .5, 1);
   --ease-jelly-soft: cubic-bezier(.25, 1.25, .45, 1);
-  --dur-jelly: .6s;
+  --dur-jelly: .7s;
+  /* spring easings for transitions (fallback: overshoot beziers) */
+  --ease-spring: cubic-bezier(.34, 1.56, .5, 1);
+  --ease-spring-bouncy: cubic-bezier(.3, 1.7, .45, 1);
+  --ease-spring-soft: cubic-bezier(.3, 1.3, .5, 1);
 }
 
+/* real damped-spring physics where linear() easing is supported
+   (Chrome/Edge 113+, Firefox 112+, Safari 17.2+); ~9% / ~15% / ~4% overshoot */
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    --ease-spring: linear(0, 0.0875 3.33%, 0.2841 6.67%, 0.5119 10%, 0.7211 13.33%, 0.8862 16.67%, 0.9994 20%, 1.0646 23.33%, 1.0918 26.67%, 1.0927 30%, 1.0784 33.33%, 1.0576 36.67%, 1.0364 40%, 1.0184 43.33%, 1.0051 46.67%, 0.9966 50%, 0.9923 53.33%, 0.991 56.67%, 0.9917 60%, 0.9935 63.33%, 0.9955 66.67%, 0.9974 70%, 0.9989 73.33%, 1 76.67%, 1.0006 80%, 1.0008 83.33%, 1.0008 86.67%, 1.0007 90%, 1.0005 93.33%, 1.0003 96.67%, 1);
+    --ease-spring-bouncy: linear(0, 0.1209 3.33%, 0.3837 6.67%, 0.669 10%, 0.9041 13.33%, 1.0587 16.67%, 1.1335 20%, 1.1464 23.33%, 1.1215 26.67%, 1.0804 30%, 1.0394 33.33%, 1.0074 36.67%, 0.9876 40%, 0.9791 43.33%, 0.9789 46.67%, 0.9834 50%, 0.9897 53.33%, 0.9955 56.67%, 0.9998 60%, 1.0023 63.33%, 1.0032 66.67%, 1.003 70%, 1.0022 73.33%, 1.0013 76.67%, 1.0005 80%, 0.9999 83.33%, 0.9996 86.67%, 0.9995 90%, 0.9996 93.33%, 0.9997 96.67%, 1);
+    --ease-spring-soft: linear(0, 0.0881 4.17%, 0.2771 8.33%, 0.4874 12.5%, 0.6753 16.67%, 0.822 20.83%, 0.9246 25%, 0.9886 29.17%, 1.0228 33.33%, 1.0366 37.5%, 1.0378 41.67%, 1.0324 45.83%, 1.0246 50%, 1.0167 54.17%, 1.0101 58.33%, 1.0051 62.5%, 1.0018 66.67%, 0.9998 70.83%, 0.9988 75%, 0.9985 79.17%, 0.9986 83.33%, 0.9989 87.5%, 0.9992 91.67%, 0.9995 95.83%, 1);
+  }
+}
+
+/* ---- click press: damped squash & stretch (volume-preserving) ---- */
 .jelly-press {
-  animation: jellyPress var(--dur-jelly) var(--ease-jelly) both;
+  animation: jellyPress var(--dur-jelly) ease-in-out both;
 }
 @keyframes jellyPress {
   0%   { transform: scale(1, 1); }
-  30%  { transform: scale(.975, 1.02); }
-  62%  { transform: scale(1.012, .99); }
+  16%  { transform: scale(.965, 1.035); }
+  34%  { transform: scale(1.022, .978); }
+  52%  { transform: scale(.993, 1.007); }
+  70%  { transform: scale(1.004, .996); }
+  86%  { transform: scale(.999, 1.001); }
   100% { transform: scale(1, 1); }
 }
 
-.jelly-wobble { animation: jellyWobble .6s var(--ease-jelly) both; }
+/* ---- horizontal wobble: decaying spring oscillation ---- */
+.jelly-wobble { animation: jellyWobble .78s ease-in-out both; }
 @keyframes jellyWobble {
-  0%   { transform: translateX(-5px); }
-  55%  { transform: translateX(2px); }
+  0%   { transform: translateX(-7px); }
+  18%  { transform: translateX(4.5px); }
+  36%  { transform: translateX(-2.8px); }
+  54%  { transform: translateX(1.6px); }
+  71%  { transform: translateX(-.9px); }
+  86%  { transform: translateX(.4px); }
   100% { transform: translateX(0); }
 }
 
-.jelly-pop { animation: jellyPop .45s var(--ease-jelly) both; }
+/* ---- pop-in with overshoot + counter-squash ---- */
+.jelly-pop { animation: jellyPop .55s ease-in-out both; }
 @keyframes jellyPop {
-  0%   { transform: scale(.9); opacity: 0; }
-  65%  { transform: scale(1.03); opacity: 1; }
-  100% { transform: scale(1); opacity: 1; }
+  0%   { transform: scale(.88); opacity: 0; }
+  30%  { opacity: 1; }
+  46%  { transform: scale(1.045, .962); }
+  68%  { transform: scale(.988, 1.01); }
+  85%  { transform: scale(1.006, .995); }
+  100% { transform: scale(1, 1); opacity: 1; }
 }
 
-.jelly-drop { animation: jellyDrop .9s var(--ease-jelly-soft) both; }
+/* ---- hero drop: gravity fall, landing squash, bounce settle ---- */
+.jelly-drop { animation: jellyDrop 1s both; }
 @keyframes jellyDrop {
-  0%   { transform: translateY(-12px); opacity: 0; }
-  60%  { transform: translateY(2px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 1; }
+  0%   { transform: translateY(-16px) scale(1.015, .97); opacity: 0; animation-timing-function: cubic-bezier(.5, 0, .78, .35); }
+  34%  { opacity: 1; }
+  50%  { transform: translateY(3px) scale(.985, 1.025); opacity: 1; animation-timing-function: ease-in-out; }
+  68%  { transform: translateY(-2.4px) scale(1.008, .992); animation-timing-function: ease-in-out; }
+  83%  { transform: translateY(.7px) scale(.998, 1.004); animation-timing-function: ease-in-out; }
+  100% { transform: translateY(0) scale(1, 1); opacity: 1; }
+}
+
+/* ---- scroll reveal: rise with deceleration + soft overshoot ---- */
+.jelly-rise { animation: jellyRise .8s both; }
+@keyframes jellyRise {
+  0%   { opacity: 0; transform: translateY(14px) scale(.997, 1.008); animation-timing-function: cubic-bezier(.18, .72, .28, 1); }
+  48%  { opacity: 1; transform: translateY(-3px) scale(1.003, .996); animation-timing-function: ease-in-out; }
+  70%  { transform: translateY(1.3px) scale(.999, 1.002); animation-timing-function: ease-in-out; }
+  86%  { transform: translateY(-.5px); animation-timing-function: ease-in-out; }
+  100% { opacity: 1; transform: translateY(0) scale(1, 1); }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .GithubCard-module__CP3e5W__card:hover,
   .TelegramCard-module__SQS1Ya__card:hover,
   .ProjectsSection-module__2qoIza__card:hover {
-    transition: transform .5s var(--ease-jelly), border-color var(--dur-fast) var(--ease-effects), box-shadow .5s var(--ease-jelly);
-    transform: translateY(-4px) scale(1.01);
+    transition: transform .55s var(--ease-spring-bouncy), border-color var(--dur-fast) var(--ease-effects), box-shadow .55s var(--ease-spring);
+    transform: translateY(-5px) scale(1.012);
   }
   .ProjectsSection-module__2qoIza__stack .ProjectsSection-module__2qoIza__card:nth-child(2):hover,
   .ProjectsSection-module__2qoIza__gridExpanded .ProjectsSection-module__2qoIza__card:nth-child(even):hover {
-    transform: translateY(-4px) scale(1.01);
+    transform: translateY(-5px) scale(1.012);
   }
   .page-module__bkK2cG__button:hover {
-    transition: transform .5s var(--ease-jelly), background-color var(--dur-fast) var(--ease-effects), box-shadow .5s var(--ease-jelly);
+    transition: transform .55s var(--ease-spring-bouncy), background-color var(--dur-fast) var(--ease-effects), box-shadow .55s var(--ease-spring);
     transform: translateY(-3px) scale(1.02);
   }
   .TopBar-module__hfKmSa__settingsBtn:hover,
   .ProjectsSection-module__2qoIza__sortTrigger:hover {
-    transition: transform .45s var(--ease-jelly), background-color var(--dur-fast) var(--ease-effects), border-color var(--dur-fast) var(--ease-effects), color var(--dur-fast) var(--ease-effects);
+    transition: transform .5s var(--ease-spring-bouncy), background-color var(--dur-fast) var(--ease-effects), border-color var(--dur-fast) var(--ease-effects), color var(--dur-fast) var(--ease-effects);
   }
 }
 
+/* ---- project cards: spring enter (staggered), blur-free leave ---- */
 .ProjectsSection-module__2qoIza__gridEntering .ProjectsSection-module__2qoIza__card {
-  animation: jellyCardEnter .62s var(--ease-jelly) backwards;
+  animation: jellyCardEnter .72s backwards;
   animation-delay: calc(var(--card-index, 0) * 65ms);
 }
 @keyframes jellyCardEnter {
-  0%   { opacity: 0; transform: translateY(14px) scale(.985); }
-  65%  { opacity: 1; transform: translateY(-2px) scale(1.006); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0%   { opacity: 0; transform: translateY(16px) scale(.98); animation-timing-function: cubic-bezier(.16, .84, .3, 1); }
+  42%  { opacity: 1; }
+  56%  { transform: translateY(-3px) scale(1.01, .996); animation-timing-function: ease-in-out; }
+  76%  { transform: translateY(1.2px) scale(.997, 1.003); animation-timing-function: ease-in-out; }
+  90%  { transform: translateY(-.4px) scale(1.001, .999); animation-timing-function: ease-in-out; }
+  100% { opacity: 1; transform: translateY(0) scale(1, 1); }
 }
 
+.ProjectsSection-module__2qoIza__gridLeaving .ProjectsSection-module__2qoIza__card {
+  animation: jellyCardLeave .26s var(--ease-effects) forwards;
+  animation-delay: calc(var(--card-index, 0) * 40ms);
+  filter: none;
+  pointer-events: none;
+}
+@keyframes jellyCardLeave {
+  0%   { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-8px) scale(.97); }
+}
+
+/* ---- side nav: spring slide, compositor-boosted ---- */
 .SideNav-module__W2m5EW__sideNav {
-  transition: transform .6s var(--ease-jelly);
+  transition: transform .7s var(--ease-spring);
+  will-change: transform;
+}
+.SideNav-module__W2m5EW__chevron {
+  transition: transform .55s var(--ease-spring-soft), color var(--dur-fast) var(--ease-effects);
 }
 
+/* ---- popups / menus / tooltips: spring transforms ---- */
+.TopBar-module__hfKmSa__popup {
+  transition: opacity .4s var(--ease-effects), transform .6s var(--ease-spring), background var(--dur-default) var(--ease-effects);
+  will-change: transform;
+}
 .TopBar-module__hfKmSa__popup.TopBar-module__hfKmSa__open .TopBar-module__hfKmSa__popupSection {
-  animation: jellyPop .4s var(--ease-jelly) both;
+  animation: jellyPop .5s ease-in-out both;
 }
 .TopBar-module__hfKmSa__popup.TopBar-module__hfKmSa__open .TopBar-module__hfKmSa__popupSection:nth-child(2) {
   animation-delay: .06s;
 }
+.TopBar-module__hfKmSa__popup.TopBar-module__hfKmSa__open .TopBar-module__hfKmSa__popupSection:nth-child(3) {
+  animation-delay: .12s;
+}
+
+.ProjectsSection-module__2qoIza__sortMenu {
+  transition: opacity .35s var(--ease-effects), transform .55s var(--ease-spring);
+}
+.ProjectsSection-module__2qoIza__sortChevron {
+  transition: transform .55s var(--ease-spring-soft), opacity var(--dur-fast) var(--ease-effects);
+}
+.TopBar-module__hfKmSa__tooltip {
+  transition: opacity var(--dur-fast) var(--ease-effects), transform .5s var(--ease-spring-soft);
+}
 
 .TopBar-module__hfKmSa__optionBtn.TopBar-module__hfKmSa__active {
-  animation: jellyPick .5s var(--ease-jelly) both;
+  animation: jellyPick .55s ease-in-out both;
 }
 @keyframes jellyPick {
-  0%   { transform: scale(.94); }
-  60%  { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-.jelly-rise { animation: jellyRise .7s var(--ease-jelly-soft) both; }
-@keyframes jellyRise {
-  0%   { opacity: 0; transform: translateY(10px); }
-  70%  { opacity: 1; transform: translateY(-1px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0%   { transform: scale(.92); }
+  40%  { transform: scale(1.06, .955); }
+  64%  { transform: scale(.985, 1.012); }
+  84%  { transform: scale(1.008, .996); }
+  100% { transform: scale(1, 1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .jelly-press, .jelly-wobble, .jelly-pop, .jelly-drop, .jelly-rise,
   .ProjectsSection-module__2qoIza__gridEntering .ProjectsSection-module__2qoIza__card,
-  .TopBar-module__hfKmSa__optionBtn.TopBar-module__hfKmSa__active {
+  .ProjectsSection-module__2qoIza__gridLeaving .ProjectsSection-module__2qoIza__card,
+  .TopBar-module__hfKmSa__optionBtn.TopBar-module__hfKmSa__active,
+  .TopBar-module__hfKmSa__popup.TopBar-module__hfKmSa__open .TopBar-module__hfKmSa__popupSection {
     animation: none !important;
   }
-  .SideNav-module__W2m5EW__sideNav { transition: transform var(--dur-slow) var(--ease-effects); }
+  .SideNav-module__W2m5EW__sideNav {
+    transition: transform var(--dur-slow) var(--ease-effects);
+    will-change: auto;
+  }
+  .TopBar-module__hfKmSa__popup,
+  .ProjectsSection-module__2qoIza__sortMenu { will-change: auto; }
 }
 
 .page-module__iRtBbG__mdTable {
@@ -150,7 +231,7 @@
   color: var(--text-muted);
   flex: 1;
   min-width: 0;
-  margin: 0 12px;
+  margin: 0 0 0 12px;
   font-size: .7rem;
   font-weight: 400;
   white-space: nowrap;

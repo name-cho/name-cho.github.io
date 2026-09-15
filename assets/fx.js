@@ -182,7 +182,8 @@
       el.classList.remove("jelly-press");
       void el.offsetWidth;
       el.classList.add("jelly-press");
-      setTimeout(function () { el.classList.remove("jelly-press"); }, 620);
+      clearTimeout(el.__jellyTimer);
+      el.__jellyTimer = setTimeout(function () { el.classList.remove("jelly-press"); }, 760);
     }
   }, true);
 

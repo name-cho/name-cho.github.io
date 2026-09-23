@@ -132,8 +132,8 @@ window.SITE_DATA = {
       name: "Maximus",
       icon: "fa-comment-dots",
       lang: "Python",
-      stars: 0, forks: 0, size: "6.44 MiB", commits: 76,
-      updated: "2026-09-01T12:29:13ZZ",
+      stars: 0, forks: 0, size: "6.44 MiB", commits: 77,
+      updated: "2026-09-23T17:08:29ZZ",
       url: "https://github.com/name-cho/Maximus",
         desc: {
         en: "Modular userbot for the MAX messenger, built on PyMax (maxapi-python).",
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "962.00 KB", commits: 54,
-      updated: "2026-09-23T06:03:36ZZ",
+      stars: 0, forks: 0, size: "962.00 KB", commits: 55,
+      updated: "2026-09-23T11:46:56ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

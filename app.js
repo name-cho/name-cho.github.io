@@ -401,7 +401,8 @@
           return {
             name: r.name, stargazers_count: r.stargazers_count, forks_count: r.forks_count,
             language: r.language, size: r.size, pushed_at: r.pushed_at, updated_at: r.updated_at,
-            html_url: r.html_url, description: r.description
+            html_url: r.html_url, description: r.description,
+            owner: r.owner ? { avatar_url: r.owner.avatar_url } : null
           };
         })
       }));
@@ -459,6 +460,7 @@
       });
     });
     var g = D.git;
+    if (repos[0] && repos[0].owner && repos[0].owner.avatar_url) g.avatar = repos[0].owner.avatar_url;
     var stars = 0, forks = 0, top = null;
     repos.forEach(function (r) {
       stars += r.stargazers_count || 0;

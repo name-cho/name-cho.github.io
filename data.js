@@ -120,8 +120,8 @@ window.SITE_DATA = {
       name: "kasseta",
       icon: "fa-tv",
       lang: "JavaScript",
-      stars: 0, forks: 0, size: "116.00 KB", commits: 3,
-      updated: "2026-08-13T22:45:51ZZ",
+      stars: 0, forks: 0, size: "130.00 KB", commits: 4,
+      updated: "2026-09-25T11:34:58ZZ",
       url: "https://github.com/name-cho/kasseta",
         desc: {
         en: "Self-made retro video hosting in the style of Win95 / YouTube of the 2000s.",
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1.17 MiB", commits: 64,
-      updated: "2026-09-25T01:35:48ZZ",
+      stars: 0, forks: 0, size: "1.17 MiB", commits: 65,
+      updated: "2026-09-25T07:56:07ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

@@ -316,7 +316,7 @@ window.SITE_DATA = {
     { icon: "fab fa-telegram",  name: "tg channel", value: "@zoyuki_room",        url: "https://t.me/zoyuki_room" },
     { icon: "fab fa-vk",        name: "vk",        value: "/name_cho",            url: "https://vk.com/name_cho" },
     { name: "stoat server",   value: "a?",                   url: "https://stt.gg/2Esp1MVr" },
-    { icon: "fab fa-bluesky",   name: "bsky",      value: "@name_cho",            url: "https://bsky.app/profile/name_cho.bsky.social" },
+    { icon: "fab fa-bluesky",   name: "bsky",      value: "@name_cho",            url: "https://bsky.app/profile/name-cho.bsky.social" },
     { icon: "fas fa-paperclip",     name: "max",       value: "the usual bridge",     url: "https://unlk.link/ujuTw" },
     { icon: "fas fa-envelope",      name: "mail",      value: "hvasyak@gmail.com",     url: "mailto:hvasyak@gmail.com" },
     { icon: "fab fa-github",    name: "github",    value: "/name-cho",            url: "https://github.com/name-cho" },

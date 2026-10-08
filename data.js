@@ -60,8 +60,8 @@ window.SITE_DATA = {
       name: "uniland",
       icon: "fa-code",
       lang: "Python",
-      stars: 0, forks: 0, size: "59.00 KB", commits: 5,
-      updated: "2026-08-05T07:25:37ZZ",
+      stars: 0, forks: 0, size: "59.00 KB", commits: 6,
+      updated: "2026-10-08T17:10:14ZZ",
       url: "https://github.com/name-cho/uniland",
         desc: {
         en: "A small friendly language for scripts: automation, utilities, files, JSON and HTTP, simple console and window programs.",
@@ -204,8 +204,8 @@ window.SITE_DATA = {
       name: "discord-autoquest",
       icon: "fa-wand-magic-sparkles",
       lang: "Python",
-      stars: 0, forks: 0, size: "41.00 KB", commits: 22,
-      updated: "2026-08-05T07:24:20ZZ",
+      stars: 0, forks: 0, size: "45.00 KB", commits: 24,
+      updated: "2026-10-08T17:03:34ZZ",
       url: "https://github.com/name-cho/discord-autoquest",
         desc: {
         en: "A high-performance script that automates Discord quests by injecting a custom JS engine into the client via Chrome DevTools Protocol.",
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1.45 MiB", commits: 127,
-      updated: "2026-10-08T09:06:21ZZ",
+      stars: 0, forks: 0, size: "1.50 MiB", commits: 128,
+      updated: "2026-10-08T16:35:09ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

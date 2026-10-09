@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1.50 MiB", commits: 128,
-      updated: "2026-10-08T16:35:09ZZ",
+      stars: 0, forks: 0, size: "1.50 MiB", commits: 129,
+      updated: "2026-10-08T22:09:33ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

@@ -48,7 +48,7 @@ window.SITE_DATA = {
       name: "chie",
       icon: "fa-pen-nib",
       lang: "Rust",
-      stars: 0, forks: 0, size: "41.00 KB", commits: 9,
+      stars: 0, forks: 0, size: "41.00 KB", commits: 6,
       updated: "2026-08-03T11:12:00ZZ",
       url: "https://github.com/name-cho/chie",
         desc: {
@@ -72,8 +72,8 @@ window.SITE_DATA = {
       name: "chiplay",
       icon: "fa-headphones",
       lang: "Rust",
-      stars: 0, forks: 1, size: "54.00 KB", commits: 12,
-      updated: "2026-08-05T07:10:23ZZ",
+      stars: 0, forks: 1, size: "55.00 KB", commits: 13,
+      updated: "2026-10-25T16:53:41ZZ",
       url: "https://github.com/name-cho/chiplay",
         desc: {
         en: "Terminal music player: local files and internet radio, keyboard-driven, spectrum view, media keys. One ~7 MB binary that starts instantly.",
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1008.00 KB", commits: 211,
-      updated: "2026-10-25T11:47:55ZZ",
+      stars: 0, forks: 0, size: "1.03 MiB", commits: 211,
+      updated: "2026-10-25T16:31:19ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

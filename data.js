@@ -48,7 +48,7 @@ window.SITE_DATA = {
       name: "chie",
       icon: "fa-pen-nib",
       lang: "Rust",
-      stars: 0, forks: 0, size: "41.00 KB", commits: 6,
+      stars: 0, forks: 0, size: "41.00 KB", commits: 9,
       updated: "2026-08-03T11:12:00ZZ",
       url: "https://github.com/name-cho/chie",
         desc: {
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1.03 MiB", commits: 211,
-      updated: "2026-10-25T16:31:19ZZ",
+      stars: 0, forks: 0, size: "1.03 MiB", commits: 213,
+      updated: "2026-10-25T22:37:41ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

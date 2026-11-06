@@ -252,7 +252,7 @@ window.SITE_DATA = {
       name: "my-ghostty",
       icon: "fa-terminal",
       lang: "GLSL",
-      stars: 0, forks: 0, size: "6.00 KB", commits: 1,
+      stars: 0, forks: 0, size: "6.00 KB", commits: 4,
       updated: "2026-07-14T13:42:48ZZ",
       url: "https://github.com/name-cho/my-ghostty",
         desc: {
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "2.03 MiB", commits: 256,
-      updated: "2026-11-05T22:04:37ZZ",
+      stars: 0, forks: 0, size: "2.03 MiB", commits: 257,
+      updated: "2026-11-06T02:32:08ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

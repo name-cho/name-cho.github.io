@@ -204,8 +204,8 @@ window.SITE_DATA = {
       name: "discord-autoquest",
       icon: "fa-wand-magic-sparkles",
       lang: "Python",
-      stars: 0, forks: 0, size: "45.00 KB", commits: 24,
-      updated: "2026-10-08T17:03:34ZZ",
+      stars: 0, forks: 0, size: "45.00 KB", commits: 25,
+      updated: "2026-11-11T15:15:28ZZ",
       url: "https://github.com/name-cho/discord-autoquest",
         desc: {
         en: "A high-performance script that automates Discord quests by injecting a custom JS engine into the client via Chrome DevTools Protocol.",
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1.05 MiB", commits: 274,
-      updated: "2026-11-10T23:28:43ZZ",
+      stars: 0, forks: 0, size: "1.09 MiB", commits: 275,
+      updated: "2026-11-11T06:39:27ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

@@ -204,7 +204,7 @@ window.SITE_DATA = {
       name: "discord-autoquest",
       icon: "fa-wand-magic-sparkles",
       lang: "Python",
-      stars: 0, forks: 0, size: "45.00 KB", commits: 25,
+      stars: 0, forks: 0, size: "50.00 KB", commits: 25,
       updated: "2026-11-11T15:15:28ZZ",
       url: "https://github.com/name-cho/discord-autoquest",
         desc: {
@@ -276,8 +276,8 @@ window.SITE_DATA = {
       name: "name-cho.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "1.09 MiB", commits: 275,
-      updated: "2026-11-11T06:39:27ZZ",
+      stars: 0, forks: 0, size: "1.09 MiB", commits: 276,
+      updated: "2026-11-11T15:21:24ZZ",
       url: "https://github.com/name-cho/name-cho.github.io",
       desc: {
         en: "Source of this site: name-cho.github.io.",

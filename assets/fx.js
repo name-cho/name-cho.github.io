@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var LS_KEY = "cho.particles";
+  var LS_KEY = "rawumi.particles";
   var enabled = localStorage.getItem(LS_KEY) !== "off";
 
   var canvas = document.createElement("canvas");
@@ -34,11 +34,10 @@
     var cs = getComputedStyle(document.documentElement);
     function v(n, fb) { var x = cs.getPropertyValue(n).trim(); return x || fb; }
     return [
-      v("--primary", "#6750e0"),
-      v("--tertiary", "#a855f7"),
-      v("--secondary", "#17a982"),
-      v("--text-color", "#1c1a22"),
-      v("--primary-container", "#e6deff")
+      v("--ink", "#141414"),
+      v("--primary", "#111111"),
+      v("--ink-variant", "#4a4a4a"),
+      v("--ink-muted", "#7a7a7a")
     ];
   }
   var colors = palette();
@@ -172,7 +171,7 @@
 
   document.addEventListener("click", function (e) {
     if (e.target.closest && e.target.closest(IGNORE)) return;
-    var el = e.target.closest && e.target.closest("a, button, .ProjectsSection-module__2qoIza__card, .GithubCard-module__CP3e5W__card, .TelegramCard-module__SQS1Ya__card, .page-module__E0kJGG__listRow");
+    var el = e.target.closest && e.target.closest("a, button, .cell, .btn, .icon-btn, .page-module__E0kJGG__listRow");
     var power = el ? 1.25 : 0.7;
     var count = el ? 26 : 14;
     spawn(e.clientX, e.clientY, { count: count, power: power });

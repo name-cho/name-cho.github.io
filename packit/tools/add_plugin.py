@@ -35,7 +35,7 @@ def main():
     ap.add_argument('--id', required=True)
     ap.add_argument('--name', required=True)
     ap.add_argument('--version', required=True)
-    ap.add_argument('--author', default='@name_cho')
+    ap.add_argument('--author', default='@rawumi')
     ap.add_argument('--state', default='release', choices=['release', 'beta', 'alpha'])
     ap.add_argument('--desc', default='')
     ap.add_argument('--icon', default='')
@@ -48,7 +48,7 @@ def main():
     ap.add_argument('--license', default='')
     ap.add_argument('--langs', default='')
     ap.add_argument('--bugs', default='')
-    ap.add_argument('--base-url', default='https://name-cho.github.io/packit')
+    ap.add_argument('--base-url', default='https://rawumi.github.io/packit')
     ap.add_argument('--no-copy', action='store_true')
     a = ap.parse_args()
 

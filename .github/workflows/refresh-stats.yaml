@@ -20,7 +20,7 @@ jobs:
         run: python tools/refresh_stats.py data.js
       - name: commit baked stats
         run: |
-          git config user.name  "cho-stats-bot"
+          git config user.name  "rawumi-stats-bot"
           git config user.email "bot@users.noreply.github.com"
           git add data.js
           git diff --cached --quiet && echo "no changes" && exit 0

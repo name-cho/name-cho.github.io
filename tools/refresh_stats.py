@@ -1,11 +1,46 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 import json
 import re
 import sys
 import urllib.request
 
 DATA_JS = sys.argv[1] if len(sys.argv) > 1 else 'data.js'
-GH_USER = 'name-cho'
+GH_USER = 'rawumi'
+
+LANG_ICONS = {
+    'python': 'fa-code', 'javascript': 'fa-code', 'typescript': 'fa-code', 'rust': 'fa-terminal',
+    'shell': 'fa-terminal', 'html': 'fa-globe', 'css': 'fa-palette', 'kotlin': 'fa-mobile-screen-button',
+    'java': 'fa-code', 'glsl': 'fa-wand-magic-sparkles', 'visual basic .net': 'fa-taxi',
+    'c': 'fa-microchip', 'c++': 'fa-microchip', 'c#': 'fa-code', 'go': 'fa-code', 'php': 'fa-code',
+}
+
+
+def js_str(value):
+    return str(value).replace('\\', '\\\\').replace('"', '\\"').replace('\n', ' ').replace('\r', ' ').strip()
+
+
+def new_project_block(r):
+    lang = r.get('language') or 'вЂ”'
+    desc = (r.get('description') or '').strip()
+    cc = commit_count(r['full_name'])
+    return (
+        '    {\n'
+        '      name: "%s",\n'
+        '      icon: "%s",\n'
+        '      lang: "%s",\n'
+        '      stars: %d, forks: %d, size: "%s", commits: %s,\n'
+        '      updated: "%s",\n'
+        '      url: "%s",\n'
+        '      desc: { en: "%s", ru: "%s" }\n'
+        '    },\n' % (
+            js_str(r['name']), LANG_ICONS.get(lang.lower(), 'fa-code'), js_str(lang),
+            r['stargazers_count'], r['forks_count'], human_size(r['size']),
+            0 if cc is None else cc,
+            (r.get('pushed_at') or r.get('updated_at') or '')[:19] + 'Z',
+            js_str(r['html_url']),
+            js_str(desc),
+            js_str(desc))
+    )
 
 def get(url):
     req = urllib.request.Request(url, headers={
@@ -56,7 +91,7 @@ def main():
             'stars': r['stargazers_count'],
             'forks': r['forks_count'],
             'size': human_size(r['size']),
-            'updated': (r.get('pushed_at') or r.get('updated_at') or '')[:20] + 'Z',
+            'updated': (r.get('pushed_at') or r.get('updated_at') or '')[:19] + 'Z',
         }
         if cc is not None:
             fields['commits'] = cc
@@ -88,7 +123,19 @@ def main():
     m = re.search(r'topRepo: \{ name: "[^"]*", lang: "[^"]*", stars: \d+, url: "[^"]*" \}', src)
     if m:
         src = src[:m.start()] + ('topRepo: { name: "%s", lang: "%s", stars: %d, url: "%s" }' % (
-            top['name'], top.get('language') or '—', top['stargazers_count'], top['html_url'])) + src[m.end():]
+            top['name'], top.get('language') or 'вЂ”', top['stargazers_count'], top['html_url'])) + src[m.end():]
+
+    known = set(n.lower() for n in names)
+    for r in repos:
+        if r['name'].lower() in known:
+            continue
+        anchor = src.find('projects: [')
+        if anchor < 0:
+            break
+        at = src.find('\n', anchor) + 1
+        src = src[:at] + new_project_block(r) + src[at:]
+        known.add(r['name'].lower())
+        print('  + new project: %s' % r['name'])
 
     open(DATA_JS, 'w', encoding='utf-8').write(src)
     print('updated projects: %d' % changed)

@@ -114,13 +114,13 @@ def crumb_sub(i18n_key, fallback):
 def hero():
     return """<main class="page-module__E0kJGG__main">
 <div class="page-module__E0kJGG__introCol">
-<h1 id="heroHandle" class="jelly-drop">cho</h1>
+<h1 id="heroHandle" class="jelly-drop">rawumi</h1>
 <p class="page-module__E0kJGG__tagline jelly-rise" id="heroTagline"></p>
 </div>
 <div class="page-module__E0kJGG__heroDivider" aria-hidden="true"></div>
 <div class="page-module__E0kJGG__links">
 <div class="GithubCard-module__CP3e5W__card">
-<a href="https://github.com/name-cho" class="GithubCard-module__CP3e5W__mainRow" id="gitCard" aria-label="GitHub profile" target="_blank" rel="noopener">
+<a href="https://github.com/rawumi" class="GithubCard-module__CP3e5W__mainRow" id="gitCard" aria-label="GitHub profile" target="_blank" rel="noopener">
 <div class="GithubCard-module__CP3e5W__avatar GithubCard-module__CP3e5W__skeleton" id="gitAvatar"></div>
 <div class="GithubCard-module__CP3e5W__info">
 <div class="GithubCard-module__CP3e5W__login GithubCard-module__CP3e5W__skeletonText" id="gitLogin"></div>
@@ -191,8 +191,8 @@ def page(fname, title, desc, crumb, body, footer=FOOTER_HOME, container='page-mo
     print('wrote %-22s %7d bytes' % (fname, len(html)))
 
 
-page('index.html', '@name-cho',
-     'cho — projects, documentation and links.',
+page('index.html', '@rawumi',
+     'rawumi — projects, documentation and links.',
      HOME_CRUMB, hero() + PROJECTS_SECTION)
 
 about_body = """<main class="page-module__E0kJGG__main">
@@ -212,7 +212,7 @@ about_body = """<main class="page-module__E0kJGG__main">
 </div>
 </main>
 """
-page('about.html', 'about · cho', 'the person behind these pages.',
+page('about.html', 'about · rawumi', 'the person behind these pages.',
      crumb_sub('aboutTitle', 'About'), about_body)
 
 socials_body = """<main class="page-module__E0kJGG__main">
@@ -225,7 +225,7 @@ socials_body = """<main class="page-module__E0kJGG__main">
 <p class="page-module__E0kJGG__note" id="socialsNote"></p>
 </main>
 """
-page('socials.html', 'socials · cho', 'where to find cho.',
+page('socials.html', 'socials · rawumi', 'where to find rawumi.',
      crumb_sub('socialsTitle', 'Socials'), socials_body)
 
 uniland_overview = """<div class="page-module__bkK2cG__container">
@@ -233,18 +233,17 @@ uniland_overview = """<div class="page-module__bkK2cG__container">
 <h1 class="jelly-drop">UniLand</h1>
 <p class="page-module__bkK2cG__description jelly-rise" data-i18n="unilandDesc"></p>
 <div class="page-module__bkK2cG__buttons jelly-rise">
-<a href="https://github.com/name-cho/uniland" class="page-module__bkK2cG__button" target="_blank" rel="noopener"><i class="fas fa-code-commit"></i><span data-i18n="btnRepo">Repository</span></a>
+<a href="https://github.com/rawumi/uniland" class="page-module__bkK2cG__button" target="_blank" rel="noopener"><i class="fas fa-code-commit"></i><span data-i18n="btnRepo">Repository</span></a>
 <a href="uniland-doc.html" class="page-module__bkK2cG__button"><i class="fas fa-book"></i><span data-i18n="btnDocs">Documentation</span></a>
 <a href="uniland-examples.html" class="page-module__bkK2cG__button"><i class="fas fa-flask"></i><span data-i18n="btnExamples">Examples</span></a>
 </div>
 </main>
 """
-page('uniland.html', 'uniland · cho', 'a small friendly language for scripts.',
+page('uniland.html', 'uniland · rawumi', 'a small friendly language for scripts.',
      crumb_sub('unilandOverview', 'Overview'), uniland_overview,
      footer=FOOTER_SUB, page_id='uniland')
 
 md = open(os.path.join(UNILAND_SRC, 'README.md'), encoding='utf-8').read()
-md = md.replace('https://github.com/zoyuki/', 'https://github.com/name-cho/')
 body, toc = md2html.convert(md)
 body = body.replace('<h1 id="uniland">UniLand</h1>', '<h1 id="uniland" class="jelly-drop">UniLand</h1>')
 

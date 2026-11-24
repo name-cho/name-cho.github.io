@@ -1,18 +1,18 @@
 {
   "repometa": {
-    "rm_name": "cho repo",
-    "rm_maintainer": "@name_cho",
-    "rm_url": "https://name-cho.github.io/packit/repomap.json",
+    "rm_name": "rawumi repo",
+    "rm_maintainer": "@rawumi",
+    "rm_url": "https://rawumi.github.io/packit/repomap.json",
     "rm_mid": "0",
     "rm_rid": "cho_official",
     "rm_reports": "",
-    "rm_source": "https://github.com/name-cho/name-cho.github.io",
+    "rm_source": "https://github.com/rawumi/rawumi.github.io",
     "rm_telegram": "https://t.me/zoyuki_room",
     "rm_icon": "https://avatars.githubusercontent.com/u/303191525?v=4"
   },
   "repomap": {
-    "plugins": "https://name-cho.github.io/packit/plugins.json",
-    "icons": "https://name-cho.github.io/packit/icons.json"
+    "plugins": "https://rawumi.github.io/packit/plugins.json",
+    "icons": "https://rawumi.github.io/packit/icons.json"
   },
   "reasons": {
     "reasons": [
@@ -37,9 +37,9 @@
     },
     "config": {
       "acc_id": 0,
-      "acc_user": "name_cho",
-      "rules": "https://name-cho.github.io/packit/rules.md",
-      "rules_name": "cho/packit rules",
+      "acc_user": "rawumi",
+      "rules": "https://rawumi.github.io/packit/rules.md",
+      "rules_name": "rawumi/packit rules",
       "json": true
     }
   }

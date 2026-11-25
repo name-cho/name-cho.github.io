@@ -56,8 +56,8 @@ services: [
       name: "unilandc",
       icon: "fa-code",
       lang: "вЂ”",
-      stars: 0, forks: 0, size: "0 B", commits: 0,
-      updated: "2026-11-24T18:49:47Z",
+      stars: 0, forks: 0, size: "75.05 MiB", commits: 8238,
+      updated: "2026-10-30T08:06:37Z",
       url: "https://github.com/rawumi/unilandc",
       desc: { en: "", ru: "" }
     },
@@ -83,8 +83,8 @@ services: [
       name: "uniland-go",
       icon: "fa-code",
       lang: "Go",
-      stars: 0, forks: 0, size: "75.05 MiB", commits: 8238,
-      updated: "2026-10-30T08:06:37Z",
+      stars: 0, forks: 0, size: "154.00 KB", commits: 6,
+      updated: "2026-10-27T10:57:19Z",
       url: "https://github.com/rawumi/uniland-go",
       desc: { en: "", ru: "" }
     },
@@ -374,8 +374,8 @@ services: [
       name: "rawumi.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "2.06 MiB", commits: 318,
-      updated: "2026-11-24T14:17:30Z",
+      stars: 0, forks: 0, size: "2.06 MiB", commits: 319,
+      updated: "2026-11-24T23:30:09Z",
       url: "https://github.com/rawumi/rawumi.github.io",
       desc: {
         en: "Source of this site: rawumi.github.io.",

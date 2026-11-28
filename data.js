@@ -374,8 +374,8 @@ services: [
       name: "rawumi.github.io",
       icon: "fa-feather",
       lang: "HTML",
-      stars: 0, forks: 0, size: "2.25 MiB", commits: 325,
-      updated: "2026-11-27T15:13:13Z",
+      stars: 0, forks: 0, size: "2.25 MiB", commits: 326,
+      updated: "2026-11-27T23:31:29Z",
       url: "https://github.com/rawumi/rawumi.github.io",
       desc: {
         en: "Source of this site: rawumi.github.io.",
